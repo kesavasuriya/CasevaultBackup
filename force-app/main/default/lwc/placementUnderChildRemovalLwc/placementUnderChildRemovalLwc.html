@@ -1,0 +1,72 @@
+<template>
+
+    <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+    </template>
+    
+    <lightning-card title={cardTitle}>
+        <lightning-button-icon slot="actions" icon-name="utility:refresh" title="Refresh" onclick={handleRefresh} class="slds-var-p-around_small"></lightning-button-icon>
+        <template if:true={showNew}>
+            <lightning-button slot="actions" label = "New" title="New" onclick={handleFlow} class="slds-var-p-around_small"></lightning-button>
+            
+        </template>
+        <lightning-tree-grid
+                aria-labelledby="Placement"
+                id="Placement"
+                columns={gridColumns}
+                data={gridData} hide-checkbox-column="true" onrowaction={handleRowAction}
+                key-field="recordName" min-column-width="230" max-column-width="270"
+            ></lightning-tree-grid>
+    </lightning-card>
+
+
+
+    <div  class="eventModal" if:true={showFlowScreen}>
+        <c-modal-component header="Choose" modal-class='slds-modal slds-fade-in-open slds-modal_small'>
+                <!--<span slot="closeFlowModal">-->
+                    <span slot="modalClose">
+                    <lightning-button-icon icon-name="utility:close"
+                                        onclick={hideModal}
+                                        alternative-text="close"
+                                        variant="border-filled"
+                                        class="slds-modal__close"></lightning-button-icon> 
+                    <h2 id="placement_modal" class="slds-text-heading_medium slds-hyphenate">Choose</h2>
+                </span>
+                <span slot="modalBody">
+        
+                    <template lwc:if={showLivingArrangementFlow}>
+                        <lightning-flow flow-api-name="Living_Arrangement_Flow" flow-input-variables={inputvariable} onstatuschange={handleStatusChange}></lightning-flow>
+                    </template>
+                    <template lwc:elseif={showPlacementFlow}>
+                        <lightning-flow flow-api-name="New_Placement"
+                        flow-input-variables={inputvariable} onstatuschange={handleStatusChange}></lightning-flow>
+                    </template>
+                    <template lwc:else>   
+                        <lightning-layout>
+                            <lightning-layout-item size="6" padding="around-small"> 
+                                <div class="slds-text-align_center"><lightning-icon icon-name="standard:agent_home" size="large" class="slds-p-right_small"  onclick={handlePlacement}></lightning-icon></div>
+                                <p class="slds-text-align_center"><b><a onclick={handlePlacement}>Placement</a></b></p>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="6" padding="around-small">
+                                <div class="slds-text-align_center"><lightning-icon icon-name="standard:activations" size="large"  onclick={handleLivingArrangement}></lightning-icon></div>
+                                <p class="slds-text-align_center"><b><a onclick={handleLivingArrangement}>Living Arrangement</a></b></p>
+                            </lightning-layout-item>
+                        </lightning-layout>        
+                        <div class="slds-text-align_center">
+                        </div>             
+                    </template>
+
+                </span>
+                <!--<span slot="modalFooter">
+                <div>
+                    <lightning-button label="Cancel" class="slds-p-right_small" onclick={hideModal}></lightning-button>
+
+                </div>
+
+                </span>-->
+                
+        </c-modal-component>
+
+    </div>
+    
+</template>

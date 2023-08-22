@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>agrid__Allow_User_To_Override_Filters__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>To Allow user to override existing master filter with user filter</description>
+    <externalId>false</externalId>
+    <label>Allow User To Override Filters</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

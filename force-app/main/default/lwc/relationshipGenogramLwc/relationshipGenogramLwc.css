@@ -1,0 +1,124 @@
+.leftside {
+    min-width: 80%;
+}
+
+.rightside {
+    min-width: 80%;
+}
+
+.parentcircle {
+    width: 297px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: #C70000;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    align-items: baseline;
+    margin-left: -88px;
+
+}
+
+.relatedcircle {
+    width: 150px;
+    height: 150px;
+    border-radius: 60%;
+    background-color: lightgreen;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    align-items: baseline;
+    margin-right: 3px;
+    margin-top: 3px;
+    margin-left: 50px;
+
+}
+
+.othercircle {
+    width: 150px;
+    height: 150px;
+    border-radius: 60%;
+    background-color: #add8e6;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    align-items: baseline;
+    margin-right: 3px;
+    margin-top: 3px;
+    margin-left: 50px;
+
+}
+
+.collateralscircle {
+
+    width: 150px;
+    height: 150px;
+    border-radius: 60%;
+    background-color: ivory;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    align-items: baseline;
+    border: 3px solid #1798c1;
+    margin-top: 3px;
+    box-shadow: 2px 3px 9px lightskyblue;
+
+
+
+}
+
+.text {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-content: center;
+    text-align: center;
+    width: 100%;
+    min-height: 80px;
+    min-width: 235px;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+.container {
+    display: flex;
+    justify-content: center
+}
+
+.pimg {
+    width: 200px;
+
+    height: 200px;
+    border-radius: 100%;
+    position: relative;
+
+
+}
+
+
+
+
+.activecolor {
+    border: var(--border);
+    border-color: var(--activecolor);
+    border-style: solid;
+    box-shadow: 2px 3px 9px lightskyblue;
+
+}
+
+.inActivecolor {
+    border: var(--border);
+    border-color: var(--inactivecolor);
+    border-style: solid;
+    box-shadow: 2px 3px 9px lightgray;
+
+}
+
+.death {
+    border: var(--border);
+    border-color: black;
+    border-style: solid;
+    box-shadow: 2px 3px 9px rgb(179, 178, 178);
+
+}

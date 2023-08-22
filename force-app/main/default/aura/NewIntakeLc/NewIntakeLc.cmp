@@ -1,0 +1,13 @@
+<aura:component implements="force:lightningQuickAction,lightning:isUrlAddressable">
+    
+    <aura:attribute name="tabId" type="String"/>
+    <aura:attribute name="pageReference" type="Object"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"></aura:handler> 
+    
+    <lightning:workspaceAPI aura:id="workspace"></lightning:workspaceAPI>
+    <lightning:navigation aura:id="navService"/>
+    
+    <lightning:flow aura:id="intakeFlow" onstatuschange="{!c.statusChange}"></lightning:flow>
+    
+</aura:component>

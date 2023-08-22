@@ -1,0 +1,31 @@
+<template>
+
+    <lightning-record-edit-form object-api-name="Case" record-id={recordId} onsubmit={handleSubmit}  onsuccess={handleSuccess} onerror={handleError}>
+
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item size="4" padding="around-small">
+                <lightning-formatted-date-time
+                value={intakeRec.Override_DatetTime__c} year="numeric" month="numeric"
+                day="numeric"></lightning-formatted-date-time>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" padding="around-small">
+                <lightning-output-field field-name="Override_User__c" variant="label-hidden"></lightning-output-field>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" padding="around-small">
+                <div>{county}</div> 
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-small">
+                <lightning-checkbox-group name="Reason_for_intake_override__c"
+                label="Reason for intake override:"
+                options={reasonpicklist}
+                value={reasonValue}
+                onchange={handleChange} required disabled={disableFields}></lightning-checkbox-group>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-small">
+                <lightning-input-field field-name="Override_Comments__c" disabled={disableFields}></lightning-input-field>
+            </lightning-layout-item>
+        </lightning-layout>
+        <div class="slds-text-align_right"><lightning-button label="Save and Submit" type="submit" disabled={disableFields}></lightning-button></div>
+    </lightning-record-edit-form> 
+     
+</template>

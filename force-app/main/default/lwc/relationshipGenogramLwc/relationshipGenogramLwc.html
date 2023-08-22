@@ -1,0 +1,147 @@
+<template>
+
+    <template if:true={loading}>
+        <lightning-spinner variant="brand" alternative-text="loading" size="large"></lightning-spinner>
+    </template>
+
+    <template if:true={showGenogram}>
+
+        <div class="slds-text-align_left">
+
+            <lightning-input type="toggle" label="View All" value={showAllRelationship}
+                onclick={handleViewAll}></lightning-input>
+
+        </div>
+
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_10-of-12 ">
+                <div class="container">
+
+                    <div data-id={parentRecord.Id} style="display: inline-grid;margin:2px;">
+
+                        <img class={parentRecord.border} src={parentRecord.Person_Image_URL__c} alt="Profile photo" />
+
+                        <p class="text"
+                            style="display: inline-grid;background-color: red;color:white;margin:2px;margin-left:-86px;">
+                            Focus Client</br>
+                            {parentRecord.Name}</p>
+
+                    </div>
+
+                </div>
+
+                <template for:each={circleRecords} for:item="row" for:index="index">
+
+                    <div key={row.Id} style="display: inline-grid;margin:2px;">
+
+                        <template if:true={row.showImg}>
+
+                            <img src={row.Person_Image_URL__c} class={row.border} alt="Profile photo" data-id={row.Id}
+                                data-row={row} ondblclick={handleClick} />
+
+                        </template>
+
+                        <template if:false={row.showImg}>
+
+                            <img src={unknownImg} class={row.border} alt="Profile photo" data-id={row.Id} data-row={row}
+                                ondblclick={handleClick} />
+
+                        </template>
+
+
+                        <p class="text" data-id={row.Id} data-row={row} ondblclick={handleClick} style="display: inline-grid;background-color: lightgreen; /* Set the desired background color */
+                    color: black;margin:2px;">
+                            {row.status}</br>
+
+                            <span>{row.Name}<lightning-button-icon data-id={row.Id} data-row={row}
+                                    icon-name="utility:edit" class="slds-p-left_xx-small" size="xx-small"
+                                    onclick={handleEdit}></lightning-button-icon>
+                            </span>
+
+                            <b>{row.Relationship_Values__c}</b>
+                        </p>
+
+                    </div>
+
+                </template>
+
+                </br>
+                <template if:true={showAllRelationship}>
+
+                    <template for:each={otherRelations} for:item="row1" for:index="index">
+
+                        <div key={row1.Id} style="display: inline-grid;margin:2px;">
+
+                            <img src={row1.Person_Related_To__r.Person_Image_URL__c} class={row1.circle}
+                                alt="Profile photo" />
+
+                            <p class="text" style="display: inline-grid; background-color: lightblue; /* Set the desired background color */
+                    color: black;margin:2px;">
+                                {row1.Person_Related_To__r.Name}</br>
+
+                                <template for:each={row1.caseList} for:item="row2" for:index="index">
+
+                                    {row2.Relationship_Values__c}
+                                    <a key={row2.Id} data-id={row2.Id} onclick={handleNavigate}><b>{row2.Name}</b></a>
+
+                                </template>
+                            </p>
+
+                        </div>
+                    </template>
+                </template>
+            </div>
+
+            <div class="slds-col slds-size_2-of-12">
+
+                <template for:each={collateralRecords} for:item="row" for:index="index">
+
+                    <div key={row.Id} class="collateralscircle slds-p-around_medium">
+                        <p class="text">
+                            {row.Collateral_Full_Name__c}</br>
+
+                        </p>
+                    </div>
+
+                </template>
+
+            </div>
+        </div>
+    </template>
+
+    <template if:false={showGenogram}>
+
+        <h6><b>No Records Found!!</b></h6>
+
+    </template>
+
+    <template if:true={showModal}>
+        <div class="slds-modal slds-fade-in-open slds-backdrop">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <lightning-button-icon icon-name="utility:close" onclick={hideModal} alternative-text="close"
+                        variant="bare-inverse" class="slds-modal__close"></lightning-button-icon>
+                    <h2>Relationship Value</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <div class="viewPicklistValueOutModal">
+                        <lightning-layout>
+                            <lightning-layout-item size="12" padding="around-small">
+                                <lightning-combobox label="Relationship Value" name="Relationship_Values__c"
+                                    value={relationshipRecord.Relationship_Values__c} onchange={handleChange}
+                                    options={relationshipValues}></lightning-combobox>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </div>
+
+                </div>
+                <div class="slds-modal__footer">
+                    <lightning-button icon-name="utility:close" label="Discard" variant="destructive"
+                        class="slds-p-right_small" onclick={hideModal}></lightning-button>
+                    <lightning-button icon-name="utility:save" label="Save" variant="brand" onclick={handleSave}>
+                    </lightning-button>
+                </div>
+            </div>
+        </div>
+    </template>
+</template>

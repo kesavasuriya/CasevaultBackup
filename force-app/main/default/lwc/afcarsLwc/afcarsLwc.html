@@ -1,0 +1,28 @@
+<template>
+    <template if:true={isLoading}>
+        <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+    </template>
+
+    <template if:true={showRecords}>
+        <lightning-layout multiple-rows="true">
+            <template for:each={personList} for:item="row" for:index="index">
+                <lightning-layout-item padding="around-small" size="4" flexibility="auto" key={row.Id}>
+                    <div class="slds-box border">
+                        <div class="slds-grid slds-gutters">
+                            <div class="slds-col slds-size_11-of-12">
+                                <div class="slds-text-heading_small slds-hyphenate"><a data-id={row.Person__c}
+                                        onclick={handlePersonNavigate}
+                                        class="slds-p-right_large">{row.Person__r.Name}</a></div>
+                            </div>
+                        </div>
+                        <div class="slds-p-top_small slds-border_top slds-scrollable">
+                            <lightning-formatted-rich-text value={row.body}></lightning-formatted-rich-text>
+                        </div>
+                    </div>
+                </lightning-layout-item>
+            </template></lightning-layout>
+    </template>
+    <template if:false={showRecords}>
+        <div class="slds-text-align_center slds-p-top_large" style="font-size: large;"><b>No record found!!</b></div>
+    </template>
+</template>

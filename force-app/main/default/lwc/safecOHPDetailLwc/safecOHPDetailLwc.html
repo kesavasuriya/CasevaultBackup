@@ -1,0 +1,286 @@
+<template>
+    <lightning-card title="Persons">
+        <c-child-table-lwc child-list={childList} oninvolvedchild={handleChildChange}></c-child-table-lwc>
+    </lightning-card>
+    <lightning-record-edit-form object-api-name="Assessment__c" record-id={assessmentRecordId} onsubmit={handleSubmit} onsuccess={handleSuccess} onload={handleLoad}>
+        <lightning-card title="SECTION 1 : PLACEMENT/LIVING ARRANGEMENT">
+            <lightning-card title="SAFE-C CONTEXT">
+                <lightning-layout>
+                    <lightning-layout-item padding="around-small" size="4">
+                        <div>
+                            <lightning-input-field class="checkboxUI" variant="label-hidden" field-name="Current_Placement__c"  disabled={readOnly}></lightning-input-field>
+                            Current Placement
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="4">
+                        <div>
+                        <lightning-input-field class="checkboxUI" variant="label-hidden" field-name="Potential_Resource__c"  disabled={readOnly}></lightning-input-field>
+                        Potential Resource
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="4">
+                        <lightning-input-field class="slds-p-left_x-small"  field-name="Name_of_Placement_Resource__c"  disabled={readOnly}></lightning-input-field>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-card>
+            <lightning-card title="Address">
+                <lightning-layout>
+                    <lightning-layout-item padding="around-small" size="4">
+                        <lightning-input-field class="slds-p-left_x-small" variant="label-stacked" field-name="OHP_Address_Line_1__c"  disabled={readOnly}></lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="4">
+                        <lightning-input-field class="slds-p-left_x-small" variant="label-stacked" field-name="Address_Line_2__c" disabled={readOnly} ></lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="4">
+                        <lightning-input-field class="slds-p-left_x-small" variant="label-stacked" field-name="OHP_Zipcode__c" disabled={readOnly}></lightning-input-field>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-card>
+            <lightning-card title="Contact">
+                <lightning-layout>
+                    <lightning-layout-item padding="around-small" size="4">
+                        <lightning-input-field class="slds-p-left_x-small" variant="label-stacked" field-name="OHP_Work__c" disabled={readOnly}></lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="4">
+                        <lightning-input-field class="slds-p-left_x-small" variant="label-stacked" field-name="OHP_Ext__c"  disabled={readOnly}></lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="4">
+                        <lightning-input-field class="slds-p-left_x-small" variant="label-stacked" field-name="OHP_Fax__c" disabled={readOnly}></lightning-input-field>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item padding="around-small" size="12">
+                        <lightning-input-field field-name="Staff_Member_Interviewed_Comments__c" variant="label-stacked"  disabled={readOnly}></lightning-input-field>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-card>
+        </lightning-card>
+        <lightning-card title="SECTION 2 : TIME FRAME FOR COMPLETION">
+            <lightning-layout multiple-rows="true">
+                <lightning-layout-item padding="around-small" size="12">
+                    <div>
+                        <lightning-input-field class="checkboxUI" variant="label-hidden" field-name="When_Circumstances_Suggest_That_the_Chil__c"  disabled={readOnly}></lightning-input-field>
+                        When Circumstances Suggest That the Chil
+                    </div>
+                </lightning-layout-item>
+           
+                <lightning-layout-item padding="around-small" size="12">
+                    <div>
+                        <lightning-input-field class="checkboxUI" variant="label-hidden" field-name="Initial_Replacement_Placements__c"   disabled={readOnly}></lightning-input-field>
+                        Initial/Replacement Placements.
+                    </div>
+                </lightning-layout-item>
+            
+                <lightning-layout-item padding="around-small" size="12">
+                    <div>
+                        <lightning-input-field class="checkboxUI" variant="label-hidden" field-name="SAFEC_Before_Completing_a_case__c"  disabled={readOnly}></lightning-input-field>
+                        Before Completing a case reconsideration
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>
+        
+        </lightning-card>
+        <lightning-card title="SECTION 3 : SAFETY INFLUENCES">
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="10">
+                    <p>1. The child's Immediate health needs are being or will be met in a manner that will prevent immediate danger to self or others <span class="slds-text-color_error">*</span> </p>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="2">
+                    <lightning-input-field field-name="The_child_s_Immediate_health_needs__c" data-index=1 variant="label-hidden"  disabled={readOnly}
+                        required>
+                    </lightning-input-field>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="10">
+                    <p>2. If the child was on medication, the medication is or will be secured and managed in a manner that prevents immediate danger to self or others<span class="slds-text-color_error"> *</span>
+                    </p>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="2">
+                    <lightning-input-field field-name="If_the_child_was_on_medication__c"  variant="label-hidden" disabled={readOnly} required>
+                    </lightning-input-field>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="10">
+                    <p>3. If the child had a history of suicidal or self-behavior, their emotional or psychological needs are being or will be addressed ad managed to prevent immediate danger to self or others<span class="slds-text-color_error"> *</span>
+                    </p>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="2">
+                    <lightning-input-field field-name="If_the_child_had_a_history_of_suicidal__c" data-index=3 variant="label-hidden"  disabled={readOnly}
+                        required>
+                    </lightning-input-field>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="10">
+                    <p>4. If the child had a history of aggressive or violent behavior, their needs are being or will be addressed and managed to prevent immediate danger to self or others.<span class="slds-text-color_error"> *</span>
+                    </p>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="2">
+                    <lightning-input-field field-name="If_the_child_had_a_history_of_aggressive__c" data-index=4 variant="label-hidden"  disabled={readOnly}
+                        required>
+                    </lightning-input-field>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="10">
+                    <p>5. If the child had a history of sexual behaviors, their needs are being or will be addressed and managed to prevent immediate danger to self or others<span class="slds-text-color_error"> *</span>
+                    </p>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="2">
+                    <lightning-input-field field-name="If_the_child_had_a_history_of_sexual__c" data-index=5 variant="label-hidden"  disabled={readOnly}
+                        required>
+                    </lightning-input-field>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="10">
+                    <p>6. If the child had a history of drug or alcohol abuse, their needs are being or will be addressed danger to self or others<span class="slds-text-color_error"> *</span>
+                    </p>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="2">
+                    <lightning-input-field field-name="If_the_child_had_a_history_of_drug__c" data-index=6 variant="label-hidden" disabled={readOnly}
+                        required>
+                    </lightning-input-field>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="10">
+                    <p> 7. This child's sleeping arrangements have been observed by caseworker and are appropriate<span class="slds-text-color_error"> *</span>
+                    </p>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="2">
+                    <lightning-input-field field-name="This_child_s_sleeping_arrangements__c" data-index=7 variant="label-hidden"  required>
+                    </lightning-input-field>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="10">
+                    <p>8. This child's is or will be protected from visits/visitation placing the child in immediate danger<span class="slds-text-color_error"> *</span>
+                    </p>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="2">
+                    <lightning-input-field field-name="This_child_s_is_or_will_be_protected__c" data-index=8 variant="label-hidden"  disabled={readOnly}
+                        required>
+                    </lightning-input-field>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="10">
+                    <p>9. This child does not express specific fears of other children, providers, or the environment that suggest that the child is in immediate danger<span class="slds-text-color_error"> *</span>
+                    </p>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="2">
+                    <lightning-input-field field-name="This_child_does_not_express_specific__c" data-index=9 variant="label-hidden"  disabled={readOnly}
+                        required>
+                    </lightning-input-field>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="10">
+                    <p>10. Provider appears competent, coherent, and currently able to carry out his/her responsibilities and poses no immediate danger to the child<span class="slds-text-color_error"> *</span>
+                    </p>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="2">
+                    <lightning-input-field field-name="Provider_appears_competent_coherent__c" data-index=10 variant="label-hidden"  disabled={readOnly}
+                        required>
+                    </lightning-input-field>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="10">
+                    <p>11. Any injuries to the child in this placement/living arrangement have been appropriately explained and documented and suggest no immediate danger to the child <span class="slds-text-color_error"> *</span>
+                    </p>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="2">
+                    <lightning-input-field field-name="Any_injuries_to_the_child__c" data-index=11 variant="label-hidden"  disabled={readOnly} required>
+                    </lightning-input-field>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="10">
+                    <p>12. This child's whereabouts are known <span class="slds-text-color_error"> *</span>
+                    </p>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="2">
+                    <lightning-input-field field-name="This_child_s_whereabouts_are_known__c" data-index=12 variant="label-hidden"  disabled={readOnly}
+                        required>
+                    </lightning-input-field>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-card>
+        <lightning-card title="SECTION 4 : SAFETY DECESION">
+            <lightning-layout multiple-rows="true">
+                <lightning-layout-item padding="around-small" size="6">
+                    <lightning-input-field field-name="OHP_Unsafe_Influences__c" variant="label-stacked" disabled={readOnly}></lightning-input-field>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="6">
+                    <lightning-input type="datetime" class="slds-p-left_x-small" label="Safety Decision" name="OHP_Safety_Decision__c" onchange={handleChange} value={assessmentRecord.OHP_Safety_Decision__c} date-style="short" disabled={readOnly}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="12">
+                    <lightning-input-field field-name="OHP_Safe_Or_Unsafe__c" variant="label-hidden" disabled={readOnly}></lightning-input-field>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="2"></lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="8">
+                    <div>
+                        <lightning-input-field class="checkboxUI" variant="label-hidden" field-name="OHP_Whereabouts_of_Child_Youth__c"  disabled={readOnly}></lightning-input-field>
+                        Whereabouts of Child/Youth is Unknown
+
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="2"></lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="8">
+                    <div>
+                        <lightning-input-field class="checkboxUI" variant="label-hidden" field-name="OHP_If_Placed_with_Potential_Resource__c" disabled={readOnly}></lightning-input-field>
+                        If Placed with the Potential Resource
+
+
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="2"></lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="8">
+                    <div>
+                        <lightning-input-field class="checkboxUI" variant="label-hidden"  field-name="OHP_if_they_remain_with_the_current__c" 
+                        disabled={readOnly}></lightning-input-field>
+                        If they remain with current Placement/Living arrangement
+
+                    </div>
+                    
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item padding="around-small" size="12">
+                    <lightning-input-field field-name="OHP_Comments__c" variant="label-stacked" disabled={readOnly} required></lightning-input-field>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-card>
+        <lightning-card title="SECTION 5 : COMMENTS">
+            <lightning-layout multiple-rows="true">
+                <lightning-layout-item padding="around-small" size="6">
+                    <lightning-input-field field-name="OHP_Signature_Obtained__c" variant="label-stacked" disabled={readOnly}>
+                    </lightning-input-field>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="6">
+                    <lightning-input type="datetime" required class="slds-p-left_x-small" variant="label-stacked" label="Signature Obtained Date" name="OHP_Signature_Obtained_Date__c" value={assessmentRecord.OHP_Signature_Obtained_Date__c} onchange={handleChange} date-style="short" disabled={readOnly}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="6">
+                    <lightning-input-field class="slds-p-left_x-small"  variant="label-stacked" field-name="OHP_Representative_Title__c"  disabled={readOnly}></lightning-input-field>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small" size="6">
+                    <lightning-input-field class="slds-p-left_x-small" variant="label-stacked"  field-name="OHP_Local_Department__c"  disabled={readOnly}></lightning-input-field>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-card>
+        <div class="slds-text-align_center slds-p-top_small footerStyle">
+            <lightning-button label="Cancel" onclick={handleCancel} title="Cancel"></lightning-button>
+            <lightning-button class="slds-p-left_small" label="Save" type="submit" title="Save"></lightning-button>
+        </div>
+    </lightning-record-edit-form>
+</template>

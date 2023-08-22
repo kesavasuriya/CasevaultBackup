@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <assignments>
+        <name>Assign_relationship_create</name>
+        <label>Assign relationship create</label>
+        <locationX>314</locationX>
+        <locationY>575</locationY>
+        <assignmentItems>
+            <assignToReference>relationshipRecord.Investigation__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Investigation__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>relationshipRecord.Person__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Person_Related_To__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>relationshipRecord.Person_Related_To__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Person__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>relationshipRecord.Relationship_Values__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>reciprocal_relationship</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>relationshipRecord.Service_Case__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Service_Case__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>relationshipRecord.Investigation__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Investigation__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>relationshipRecord.Victim__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Victim__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_Relationship</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Relationship_values</name>
+        <label>Assign Relationship values</label>
+        <locationX>50</locationX>
+        <locationY>575</locationY>
+        <assignmentItems>
+            <assignToReference>relationshipRecord</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Get_related_relationship_record</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>relationshipRecord.Relationship_Values__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>reciprocal_relationship</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Relationship_Record</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_record_size</name>
+        <label>Check record size</label>
+        <locationX>182</locationX>
+        <locationY>455</locationY>
+        <defaultConnector>
+            <targetReference>Assign_relationship_create</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_record_size_greater_than_zero</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_related_relationship_record</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_Relationship_values</targetReference>
+            </connector>
+            <label>If record size greater than zero</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>female_reciprocal_relationship</name>
+        <dataType>String</dataType>
+        <expression>Case({!$Record.Relationship_Values__c}, 
+&quot;Brother - Adoptive&quot;,&quot;Sister - Adoptive&quot;,
+&quot;Brother - Biological&quot;,&quot;Sister - Biological&quot;,
+&quot;Brother - Half&quot;,&quot;Sister - Half&quot;,
+&quot;Brother - Step&quot;,&quot;Sister - Step&quot;,
+&quot;Child care provider/worker&quot;,&quot;Daycare Child&quot;,
+&quot;Child - Adoptive&quot;,&quot;Mother - Adoptive&quot;,
+&quot;Child - Biological&quot;,&quot;Mother - Biological&quot;,
+&quot;Child - Custodial/Guardianship&quot;,&quot;Custodial/Guardianship&quot;,
+&quot;Child - Foster&quot;,&quot;Mother - Foster&quot;,
+&quot;Child - Putative&quot;,&quot;Mother - Putative&quot;,
+&quot;Child - Step&quot;,&quot;Mother - Step&quot;,
+&quot;Co-Worker&quot;,&quot;Co-Worker&quot;,
+&quot;Daycare Child&quot;,&quot;Child care provider/worker&quot;,
+&quot;Father - Adoptive&quot;,&quot;Child - Adoptive&quot;,
+&quot;Father - Biological&quot;,&quot;Child - Biological&quot;,
+&quot;Father - Foster&quot;,&quot;Child - Foster&quot;,
+&quot;Father - Putative&quot;,&quot;Child - Putative&quot;,
+&quot;Father - Step&quot;,&quot;Child - Step&quot;,
+&quot;Foster Parent&quot;,&quot;Child - Foster&quot;,
+&quot;Friend&quot;,&quot;Friend&quot;,
+&quot;Godchild&quot;,&quot;Godparent&quot;,
+&quot;Godparent&quot;,&quot;Godchild&quot;,
+&quot;Custodial/Guardianship&quot;,&quot;Child - Custodial/Guardianship&quot;,
+&quot;In-law&quot;,&quot;In-law&quot;,
+&quot;Maternal Aunt&quot;,&quot;Maternal Niece&quot;,
+&quot;Maternal Cousin&quot;,&quot;Maternal Cousin&quot;,
+&quot;Maternal Grandchild&quot;,&quot;Maternal Grandparent&quot;,
+&quot;Maternal Grandparent&quot;,&quot;Maternal Grandchild&quot;,
+&quot;Maternal Great Aunt/Uncle&quot;,&quot;Maternal Great Niece/Nephew&quot;,
+&quot;Maternal Great GrandChild&quot;,&quot;Maternal Great Grandparent&quot;,
+&quot;Maternal Great Grandparent&quot;,&quot;Maternal Great GrandChild&quot;,
+&quot;Maternal Great Niece/Nephew&quot;,&quot;Maternal Great Aunt/Uncle&quot;,
+&quot;Maternal Nephew&quot;,&quot;Maternal Aunt&quot;,
+&quot;Maternal Niece&quot;,&quot;Maternal Aunt&quot;,
+&quot;Maternal Uncle&quot;,&quot;Maternal Niece&quot;,
+&quot;Mother - Adoptive&quot;,&quot;Child - Adoptive&quot;,
+&quot;Mother - Biological&quot;,&quot;Child - Biological&quot;,
+&quot;Mother - Foster&quot;,&quot;Child - Foster&quot;,
+&quot;Mother - Putative&quot;,&quot;Child - Putative&quot;,
+&quot;Mother - Step&quot;,&quot;Child - Step&quot;,
+&quot;Neighbor&quot;,&quot;Neighbor&quot;,
+&quot;Paternal Aunt&quot;,&quot;Paternal Niece&quot;,
+&quot;Paternal Cousin&quot;,&quot;Paternal Cousin&quot;,
+&quot;Paternal Grandchild&quot;,&quot;Paternal Grandparent&quot;,
+&quot;Paternal Grandparent&quot;,&quot;Paternal Grandchild&quot;,
+&quot;Paternal Great Aunt/Uncle&quot;,&quot;Paternal Great Niece/Nephew&quot;,
+&quot;Paternal Great GrandChild&quot;,&quot;Paternal Great Grandparent&quot;,
+&quot;Paternal Great Grandparent&quot;,&quot;Paternal Great GrandChild&quot;,
+&quot;Paternal Great Niece/Nephew&quot;,&quot;Paternal Great Aunt/Uncle&quot;,
+&quot;Paternal Nephew&quot;,&quot;Paternal Aunt&quot;,
+&quot;Paternal Niece&quot;,&quot;Paternal Aunt&quot;,
+&quot;Paternal Uncle&quot;,&quot;Paternal Niece&quot;,
+&quot;Residential Facility Child&quot;,&quot;Residential Facility Staff&quot;,
+&quot;Residential Facility Staff&quot;,&quot;Residential Facility Child&quot;,
+&quot;School Staff&quot;,&quot;Student&quot;,
+&quot;Significant Other/Partner&quot;,&quot;Significant Other/Partner&quot;,
+&quot;Sister - Adoptive&quot;,&quot;Sister - Adoptive&quot;,
+&quot;Sister - Biological&quot;,&quot;Sister - Biological&quot;,
+&quot;Sister - Half&quot;,&quot;Sister - Half&quot;,
+&quot;Sister - Step&quot;,&quot;Sister - Step&quot;,
+&quot;Social Worker&quot;,&quot;&quot;,
+&quot;Spouse&quot;,&quot;Spouse&quot;,
+&quot;Spouse-Ex&quot;,&quot;Spouse - Ex&quot;,
+&quot;Student&quot;,&quot;School Staff&quot;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>male_reciprocal_relationship</name>
+        <dataType>String</dataType>
+        <expression>Case({!$Record.Relationship_Values__c}, 
+&quot;Brother - Adoptive&quot;,&quot;Brother - Adoptive&quot;,
+&quot;Brother - Biological&quot;,&quot;Brother - Biological&quot;,
+&quot;Brother - Half&quot;,&quot;Brother - Half&quot;,
+&quot;Brother - Step&quot;,&quot;Brother - Step&quot;,
+&quot;Child care provider/worker&quot;,&quot;Daycare Child&quot;,
+&quot;Child - Adoptive&quot;,&quot;Father - Adoptive&quot;,
+&quot;Child - Biological&quot;,&quot;Father - Biological&quot;,
+&quot;Child - Custodial/Guardianship&quot;,&quot;Custodial/Guardianship&quot;,
+&quot;Child - Foster&quot;,&quot;Father - Foster&quot;,
+&quot;Child - Putative&quot;,&quot;Father - Putative&quot;,
+&quot;Child - Step&quot;,&quot;Father - Step&quot;,
+&quot;Co-Worker&quot;,&quot;Co-Worker&quot;,
+&quot;Daycare Child&quot;,&quot;Child care provider/worker&quot;,
+&quot;Father - Adoptive&quot;,&quot;Child - Adoptive&quot;,
+&quot;Father - Biological&quot;,&quot;Child - Biological&quot;,
+&quot;Father - Foster&quot;,&quot;Child - Foster&quot;,
+&quot;Father - Putative&quot;,&quot;Child - Putative&quot;,
+&quot;Father - Step&quot;,&quot;Child - Step&quot;,
+&quot;Foster Parent&quot;,&quot;Child - Foster&quot;,
+&quot;Friend&quot;,&quot;Friend&quot;,
+&quot;Godchild&quot;,&quot;Godparent&quot;,
+&quot;Godparent&quot;,&quot;Godchild&quot;,
+&quot;Custodial/Guardianship&quot;,&quot;Child - Custodial/Guardianship&quot;,
+&quot;In-law&quot;,&quot;In-law&quot;,
+&quot;Maternal Aunt&quot;,&quot;Maternal Nephew&quot;,
+&quot;Maternal Cousin&quot;,&quot;Maternal Cousin&quot;,
+&quot;Maternal Grandchild&quot;,&quot;Maternal Grandparent&quot;,
+&quot;Maternal Grandparent&quot;,&quot;Maternal Grandchild&quot;,
+&quot;Maternal Great Aunt/Uncle&quot;,&quot;Maternal Great Niece/Nephew&quot;,
+&quot;Maternal Great GrandChild&quot;,&quot;Maternal Great Grandparent&quot;,
+&quot;Maternal Great Grandparent&quot;,&quot;Maternal Great GrandChild&quot;,
+&quot;Maternal Great Niece/Nephew&quot;,&quot;Maternal Great Aunt/Uncle&quot;,
+&quot;Maternal Nephew&quot;,&quot;Maternal Uncle&quot;,
+&quot;Maternal Niece&quot;,&quot;Maternal Uncle&quot;,
+&quot;Maternal Uncle&quot;,&quot;Maternal Nephew&quot;,
+&quot;Mother - Adoptive&quot;,&quot;Child - Adoptive&quot;,
+&quot;Mother - Biological&quot;,&quot;Child - Biological&quot;,
+&quot;Mother - Foster&quot;,&quot;Child - Foster&quot;,
+&quot;Mother - Putative&quot;,&quot;Child - Putative&quot;,
+&quot;Mother - Step&quot;,&quot;Child - Step&quot;,
+&quot;Neighbor&quot;,&quot;Neighbor&quot;,
+&quot;Paternal Aunt&quot;,&quot;Paternal Nephew&quot;,
+&quot;Paternal Cousin&quot;,&quot;Paternal Cousin&quot;,
+&quot;Paternal Grandchild&quot;,&quot;Paternal Grandparent&quot;,
+&quot;Paternal Grandparent&quot;,&quot;Paternal Grandchild&quot;,
+&quot;Paternal Great Aunt/Uncle&quot;,&quot;Paternal Great Niece/Nephew&quot;,
+&quot;Paternal Great GrandChild&quot;,&quot;Paternal Great Grandparent&quot;,
+&quot;Paternal Great Grandparent&quot;,&quot;Paternal Great GrandChild&quot;,
+&quot;Paternal Great Niece/Nephew&quot;,&quot;Paternal Great Aunt/Uncle&quot;,
+&quot;Paternal Nephew&quot;,&quot;Paternal Uncle&quot;,
+&quot;Paternal Niece&quot;,&quot;Paternal Uncle&quot;,
+&quot;Paternal Uncle&quot;,&quot;Paternal Nephew&quot;,
+&quot;Residential Facility Child&quot;,&quot;Residential Facility Staff&quot;,
+&quot;Residential Facility Staff&quot;,&quot;Residential Facility Child&quot;,
+&quot;School Staff&quot;,&quot;Student&quot;,
+&quot;Significant Other/Partner&quot;,&quot;Significant Other/Partner&quot;,
+&quot;Sister - Adoptive&quot;,&quot;Brother - Adoptive&quot;,
+&quot;Sister - Biological&quot;,&quot;Brother - Biological&quot;,
+&quot;Sister - Half&quot;,&quot;Brother - Half&quot;,
+&quot;Sister - Step&quot;,&quot;Brother - Step&quot;,
+&quot;Spouse&quot;,&quot;Spouse&quot;,
+&quot;Spouse-Ex&quot;,&quot;Spouse - Ex&quot;,
+&quot;Student&quot;,&quot;School Staff&quot;,null)</expression>
+    </formulas>
+    <formulas>
+        <name>reciprocal_relationship</name>
+        <dataType>String</dataType>
+        <expression>If(ISPICKVAL({!$Record.Person__r.Gender__c} , &quot;Male&quot;)
+,{!male_reciprocal_relationship},{!female_reciprocal_relationship})</expression>
+    </formulas>
+    <interviewLabel>Reciprocal Relationship {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Reciprocal Relationship</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Relationship</name>
+        <label>Create Relationship</label>
+        <locationX>314</locationX>
+        <locationY>695</locationY>
+        <connector>
+            <targetReference>Refresh_Event_0</targetReference>
+        </connector>
+        <inputReference>relationshipRecord</inputReference>
+    </recordCreates>
+    <recordCreates>
+        <name>Refresh_Event</name>
+        <label>Refresh Event</label>
+        <locationX>50</locationX>
+        <locationY>815</locationY>
+        <inputAssignments>
+            <field>Id__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Refresh_Person__e</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>Refresh_Event_0</name>
+        <label>Refresh Event</label>
+        <locationX>314</locationX>
+        <locationY>815</locationY>
+        <inputAssignments>
+            <field>Id__c</field>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Refresh_Person__e</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Get_related_relationship_record</name>
+        <label>Get related relationship record</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_record_size</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Person__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Person_Related_To__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Person_Related_To__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Person__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Victim__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Victim__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Investigation__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Investigation__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Service_Case__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Service_Case__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Relationship__c</object>
+        <sortField>LastModifiedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Relationship_Record</name>
+        <label>Update Relationship Record</label>
+        <locationX>50</locationX>
+        <locationY>695</locationY>
+        <connector>
+            <targetReference>Refresh_Event</targetReference>
+        </connector>
+        <inputReference>relationshipRecord</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_related_relationship_record</targetReference>
+        </connector>
+        <object>Relationship__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>relationshipRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Relationship__c</objectType>
+    </variables>
+</Flow>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>License_Document__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK( State_Id_Drivers_License__c ) ,&apos;&apos;, IF( NOT( ISBLANK( License_Document_Id__c ) ) ,
+HYPERLINK(&quot;/&quot; &amp;	License_Document_Id__c,&apos;View file&apos;,&apos;_self&apos;)&amp; &apos;               &apos; ,&apos;Upload file&apos; &amp; &apos;              &apos;) &amp; HYPERLINK(&apos;/lightning/cmp/c__filePreviewCmp?c__recordId=&apos;&amp; Id &amp;
+&apos;&amp;c__fileType=License&apos; ,IMAGE(&apos;/resource/UploadIcon&apos;,&apos;Upload&apos;,20,20) ,&apos;_self&apos;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>License Document</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

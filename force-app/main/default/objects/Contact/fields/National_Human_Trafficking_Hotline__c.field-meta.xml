@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>National_Human_Trafficking_Hotline__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(&quot;https://humantraffickinghotline.org/en/report-trafficking&quot;, &quot;Report Trafficking&quot;,&apos;_self&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>National Human Trafficking Hotline</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

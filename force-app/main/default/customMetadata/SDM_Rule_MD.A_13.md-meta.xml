@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>A-13</label>
+    <protected>false</protected>
+    <values>
+        <field>Abuse_Name__c</field>
+        <value xsi:type="xsd:string">A child discharged from a facility</value>
+    </values>
+    <values>
+        <field>Abuse_Type__c</field>
+        <value xsi:type="xsd:string">Neglect</value>
+    </values>
+    <values>
+        <field>CPS_Response_Type__c</field>
+        <value xsi:type="xsd:string">CPS-AR</value>
+    </values>
+    <values>
+        <field>X33446__c</field>
+        <value xsi:type="xsd:string">NO</value>
+    </values>
+    <values>
+        <field>X33447__c</field>
+        <value xsi:type="xsd:string">NO</value>
+    </values>
+    <values>
+        <field>X33448__c</field>
+        <value xsi:type="xsd:string">NO</value>
+    </values>
+    <values>
+        <field>X33449__c</field>
+        <value xsi:type="xsd:string">EDITABLE</value>
+    </values>
+    <values>
+        <field>X33451__c</field>
+        <value xsi:type="xsd:string">NO</value>
+    </values>
+    <values>
+        <field>X33452__c</field>
+        <value xsi:type="xsd:string">NO</value>
+    </values>
+    <values>
+        <field>X33453__c</field>
+        <value xsi:type="xsd:string">EDITABLE</value>
+    </values>
+    <values>
+        <field>X33454__c</field>
+        <value xsi:type="xsd:string">EDITABLE</value>
+    </values>
+    <values>
+        <field>X33455__c</field>
+        <value xsi:type="xsd:string">EDITABLE</value>
+    </values>
+    <values>
+        <field>X33456__c</field>
+        <value xsi:type="xsd:string">EDITABLE</value>
+    </values>
+    <values>
+        <field>X33457__c</field>
+        <value xsi:type="xsd:string">EDITABLE</value>
+    </values>
+    <values>
+        <field>X33458__c</field>
+        <value xsi:type="xsd:string">EDITABLE</value>
+    </values>
+    <values>
+        <field>X33459__c</field>
+        <value xsi:type="xsd:string">EDITABLE</value>
+    </values>
+    <values>
+        <field>X33460__c</field>
+        <value xsi:type="xsd:string">EDITABLE</value>
+    </values>
+    <values>
+        <field>X33461__c</field>
+        <value xsi:type="xsd:string">EDITABLE</value>
+    </values>
+    <values>
+        <field>X33462__c</field>
+        <value xsi:type="xsd:string">EDITABLE</value>
+    </values>
+    <values>
+        <field>X33463__c</field>
+        <value xsi:type="xsd:string">EDITABLE</value>
+    </values>
+</CustomMetadata>

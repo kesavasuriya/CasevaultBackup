@@ -1,0 +1,6 @@
+.THIS .colorRed {
+    color:#DB0000;    
+}
+.THIS .slds-modal__content {
+    overflow: visible !important;
+}

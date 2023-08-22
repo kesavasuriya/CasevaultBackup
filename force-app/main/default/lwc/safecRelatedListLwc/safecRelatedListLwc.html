@@ -1,0 +1,37 @@
+<template>
+
+   <!-- <template if:true={isLoading}>
+    <c-loading-icon-lwc></c-loading-icon-lwc>
+   </template> -->
+    <lightning-card title={safectitle}>
+        <lightning-button label="New" title="new" slot="actions" onclick={showNew}></lightning-button>
+
+        <lightning-datatable key-field="id" id="safe_c" aria-labelledby="safe_c" data={visibleData} columns={columnlist} hide-checkbox-column
+            show-row-number-column="true" onrowaction={handleRowAction}>
+        </lightning-datatable>
+        <template if:false={ShowAssessmentTable}>
+            <div class="slds-text-align_center slds-p-top_large textFont">There is no existing SAFEC record(s) found</div>
+        </template>
+        <br />
+        <div>
+            <template if:true={showChild}>
+                <c-pagination-l-w-c total-list={assessmentList} onupdate={paginationHandler}></c-pagination-l-w-c>
+            </template>
+        </div>
+    </lightning-card>
+
+    <div class="eventModal" if:true={showCmp}>
+        <c-modal-component header="SAFE-C" modal-class='slds-modal slds-fade-in-open slds-modal_large'>
+            <span slot="modalClose">
+                <lightning-button-icon icon-name="utility:close" onclick={closeModal} alternative-text="close"
+                    variant="bare-inverse" class="slds-modal__close"></lightning-button-icon>
+
+                <h2 id="modal_safec" class="slds-text-heading_medium slds-hyphenate">SAFE-C</h2>
+            </span>
+            <span slot="modalBody">
+                <c-safec-detail-lwc aria-label="Add Safec" record-id={recordId} onclose={closeEventModal}
+                    object-api-name={objectApiName} child-list={childList}></c-safec-detail-lwc>
+            </span>
+        </c-modal-component>
+    </div> 
+</template>

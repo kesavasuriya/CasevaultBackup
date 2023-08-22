@@ -1,0 +1,9 @@
+.dataTableHeight {
+    height: auto !important;
+}
+
+.footerStyle{
+    position: sticky !important;
+    bottom: 0px !important;
+    background-color: white !important;
+}

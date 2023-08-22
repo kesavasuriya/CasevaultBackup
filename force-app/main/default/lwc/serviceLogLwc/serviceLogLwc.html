@@ -1,0 +1,58 @@
+<template>
+    <lightning-card>
+        <div class="slds-text-align_right">
+            <lightning-button label="New" onclick={showAddNewService}></lightning-button>
+        </div>
+    </lightning-card>
+    <template if:true={showModalAddNewService}>
+        <div class="slds-modal slds-fade-in-open slds-backdrop">  
+            <div class="slds-modal__container">  
+                <div class="slds-modal__header">
+                    <lightning-button-icon icon-name="utility:close"
+                    onclick={handleCancel}
+                    alternative-text="close"
+                    variant="bare-inverse"
+                    class="slds-modal__close"></lightning-button-icon>   
+                    <h2>Add New Service</h2>  
+                </div>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <lightning-layout>
+                        <lightning-layout-item padding="around-small" size="6">
+                            <lightning-combobox  name="clientId"  label="Client Name"  options={clientPicklist} onchange={handleChange} required="true"></lightning-combobox>   
+                        </lightning-layout-item>  
+                        <template if:true={showVendor}>
+                            <lightning-layout-item padding="around-small" size="6">
+                                <lightning-combobox  name="service"  label="Services"  options={servicePicklist} onchange={handleChange} required="true"></lightning-combobox>   
+                            </lightning-layout-item>  
+                        </template>
+                       
+                    </lightning-layout>  
+                    <template if:true={showVendor}>
+                        <div class="slds-text-align_right slds-p-bottom_small">
+                            <lightning-button variant="brand" label="Search" onclick={handleSearch} icon-name="utility:search" disabled={showSearch}></lightning-button>
+                        </div>
+                        <lightning-card title={providerTitle}>
+                            <lightning-datatable key-field="Id"
+                            data={providers} show-row-number-column="true" selected-rows={providerSelectedRows}
+                            columns={providercolumns} onrowselection={handleProviderRowSelection}
+                            max-row-selection=1>
+                            </lightning-datatable>
+                        </lightning-card>
+                        <lightning-card title={vendorTitle}>
+                            <lightning-datatable key-field="Id"
+                            data={vendors} show-row-number-column="true" selected-rows={vendorSelectedRows}
+                            columns={vendorColumns} onrowselection={handleVendorRowSelection}
+                            max-row-selection=1>
+                            </lightning-datatable>
+                        </lightning-card>
+                    </template>      
+                            
+                </div>
+              <div class="slds-modal__footer"> 
+                <lightning-button label="Cancel" onclick={handleCancel} class="slds-p-right_small"></lightning-button> 
+                <lightning-button label="Select" variant="brand" onclick={handleSelect} disabled={showSelect}></lightning-button>  
+              </div>  
+            </div>  
+        </div>  
+    </template>    
+</template>

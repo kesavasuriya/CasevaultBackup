@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <environments>Default</environments>
+    <formulas>
+        <name>Approval_Message</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Name} + &apos; HAS BEEN APPROVED BY &apos; +UPPER({!$Record.Supervisor__r.FirstName}) + &apos; &apos;+UPPER({!$Record.Supervisor__r.LastName})+&apos; ON &apos; + TEXT(MONTH({!$Flow.CurrentDate})) + &apos;/&apos; + TEXT(DAY({!$Flow.CurrentDate})) + &apos;/&apos; + TEXT(YEAR({!$Flow.CurrentDate}))</expression>
+    </formulas>
+    <interviewLabel>Vendor Notification Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Vendor Notification Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Custom_Notification_for_Submitter</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Approval_Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Approved</stringValue>
+            </value>
+        </filters>
+        <object>Vendor__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Custom_Notification_for_Submitter</name>
+        <label>Custom Notification for Submitter</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <flowName>Custom_Notification_for_Submitter</flowName>
+        <inputAssignments>
+            <name>Notification_Body</name>
+            <value>
+                <elementReference>Approval_Message</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>recordName</name>
+            <value>
+                <elementReference>$Record.Name</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

@@ -1,0 +1,192 @@
+<template>
+    <div class="spinner">
+        <template if:true={loading}>
+            <lightning-spinner variant="brand" alternative-text="loading" size="large"></lightning-spinner>
+        </template>
+</div>
+<div class="slds-text-align_center slds-p-top_large  slds-p-bottom_large">
+    <lightning-card title="Plan for Children in Out-Of-Home Care"></lightning-card>
+</div>
+
+<lightning-layout>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+        <b>1. Child's Name</b>
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+        {socialHistoryRecord.childName}
+    </lightning-layout-item>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+        <b>14. Reasonable Efforts Made to Prevent Removal</b>
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+        {socialHistoryRecord.reasonableEffort}
+    </lightning-layout-item>
+</lightning-layout>
+
+<lightning-layout>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+        <b>2. Client ID #</b>
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+        {socialHistoryRecord.clientId}
+    </lightning-layout-item>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+        <b>15. Describe What Happened to Necessitate Placement( include events, dates, persons involved, and effectiveness of prevention efforts.)</b>
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+    </lightning-layout-item>
+</lightning-layout>
+
+<lightning-layout>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+        <b>3. Date of Removal</b>
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+        
+            <lightning-formatted-date-time value={socialHistoryRecord.removalDate} year="numeric" month="numeric" day="numeric"></lightning-formatted-date-time>
+        
+    </lightning-layout-item>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+        <b>16. Family History (include family relations, living arrangement history, previous agency contacts, past and current legal/court involvement, substance abuse and mental health history, educational and employment experience, etc.)</b>
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+    </lightning-layout-item>
+</lightning-layout>
+
+<lightning-layout>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+        <b>4. Race</b>
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+        {socialHistoryRecord.race}
+    </lightning-layout-item>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+        <b>17 .Description of Child on entry (include physical description, distinguishing features, personality, positive tributes and strengths and limitations, likes/dislikes, special talents, limitations or behavioral concerns, attitude towards placement, etc.)</b>
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+    </lightning-layout-item>
+</lightning-layout>
+
+<lightning-layout>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+        <b>5. Sex</b>
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+        {socialHistoryRecord.gender}
+    </lightning-layout-item>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+    </lightning-layout-item>
+</lightning-layout>
+
+<lightning-layout>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+        <b>6. Birthdate</b>
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+        
+            <lightning-formatted-date-time value={socialHistoryRecord.dob} year="numeric" month="numeric" day="numeric"></lightning-formatted-date-time>
+        
+    </lightning-layout-item>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+    </lightning-layout-item>
+</lightning-layout>
+
+<lightning-layout>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+        <b>7. Social Security Number</b>
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+        {socialHistoryRecord.ssn}
+    </lightning-layout-item>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+    </lightning-layout-item>
+</lightning-layout>
+
+<lightning-layout>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+        <b>8. Religion</b>
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+        {socialHistoryRecord.religion}
+    </lightning-layout-item>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+    </lightning-layout-item>
+</lightning-layout>
+
+<lightning-layout>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+        <b>9. Parent 1 Name</b>
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+        {socialHistoryRecord.applicant}
+    </lightning-layout-item>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+    </lightning-layout-item>
+</lightning-layout>
+
+<lightning-layout>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+        <b>10. parent 2 Name</b>
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+        {socialHistoryRecord.coApplicant}
+    </lightning-layout-item>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+    </lightning-layout-item>
+</lightning-layout>
+
+<lightning-layout>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+        <b>11. Child's Whereabouts Just Prior To Placement</b>
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+        {socialHistoryRecord.addressofPrimaryCaregiver}
+    </lightning-layout-item>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+    </lightning-layout-item>
+</lightning-layout>
+
+<lightning-layout>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+        <b>12. Risk Assessment Date Completed</b>
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+        
+            <lightning-formatted-date-time value={socialHistoryRecord.riskReassessmentCompletionDate} year="numeric" month="numeric" day="numeric"></lightning-formatted-date-time>
+        
+    </lightning-layout-item>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+    </lightning-layout-item>
+</lightning-layout>
+
+<lightning-layout>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+        <b>13. Date to Safety Assessment completed Date</b>
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+        
+            <lightning-formatted-date-time value={socialHistoryRecord.safecCompletionDate} year="numeric" month="numeric" day="numeric"></lightning-formatted-date-time>
+        
+    </lightning-layout-item>
+    <lightning-layout-item size="4" class="slds-p-around_small">
+    </lightning-layout-item>
+    <lightning-layout-item size="2" class="slds-p-around_small">
+    </lightning-layout-item>
+</lightning-layout>
+</template>

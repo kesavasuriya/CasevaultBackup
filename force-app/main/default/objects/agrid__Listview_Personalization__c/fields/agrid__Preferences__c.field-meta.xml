@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>agrid__Preferences__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Preferences</label>
+    <referenceTo>agrid__Configuration__c</referenceTo>
+    <relationshipLabel>Listview Personalizations (Preferences)</relationshipLabel>
+    <relationshipName>Listview_Personalizations1</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

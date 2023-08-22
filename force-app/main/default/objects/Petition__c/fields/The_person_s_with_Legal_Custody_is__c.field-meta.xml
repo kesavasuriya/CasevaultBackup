@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>The_person_s_with_Legal_Custody_is__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>The person(s) with Legal Custody is</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Petitions (The person(s) with Legal Custody is)</relationshipLabel>
+    <relationshipName>PetitionsDKUZ</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

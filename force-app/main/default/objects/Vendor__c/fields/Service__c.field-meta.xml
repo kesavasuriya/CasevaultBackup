@@ -1,0 +1,1904 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service__c</fullName>
+    <externalId>false</externalId>
+    <label>Service</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Paid_Unpaid__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Service</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Adoption Attorney Fees (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Adult Literacy Services (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Alcohol Assessment (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Alcohol Assessment-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Assessment Services (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Birth Certificate (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Budget and Financial Management- General (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Burial Assistance (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Camping (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Camping-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Career Prep Employment Prg-Gen (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>CBT/CBT+ (Cognitive Behavior Therapy)-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Child Care (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Child Care- Formal (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Child Care- Informal (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Child Development (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Child Development-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Child of a Minor Parent in Care (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Chore Services,Extermination (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Clothing Purchase (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Consumer Education (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Crisis Counseling (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Crisis Counseling-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Dental (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Difficulty of Care Stipend (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Disabled Adult (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Disabled Children (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Drug/Alcohol Assessment (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Drug/Alcohol Assessment-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Drug/Alcohol Counseling (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Drug/Alcohol Counseling-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Drug Assessment-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>DSS Provided Group Work (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>DSS Provided Group Work-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Educational Academic Support-General (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Educational-Higher Education (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Educational-High School (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Educational-Vocational (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Education and Risk Prevention - General (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Elementary School (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Emergency Bed Retainer Fee (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Emergency Shelter (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Employment Counseling (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Employment Services (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Enhanced Aftercare Services (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Eye Care (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Family (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Family Centered Practice (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Family Conferencing (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Family-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Family Functional Therapy-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Family planning (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Family Therapeutic Rec-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Family Therapeutic Recreation (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Fam Support/Healthy Marriage Educ-Gen (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>FAST-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>FCP- Kinship Diversion (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Financial Management (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Food (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Formal Elementary School (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Formal High School (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Formal Kindergarten (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Formal Middle School (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Furniture, Equipment (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Furniture (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>GED (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Group (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Group Conferencing (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Group Counseling (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Group Counseling-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Group-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Health maintenance (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Home Improvement (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Homemaker Services (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Home Management Training Health-General (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Housing-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Housing Education- General (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Incredible Years-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Individual (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Individual Counseling (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Individual Counseling-Direct-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Individual Counseling-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Individual-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Infant and Toddlers Programs(4-5)-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Initial Clothing Allowance (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Initial Life Skills Assessment-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Interagency Family Preservation (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Kindergarten (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Life Skills Instruction-Group-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Life Skills Instruction-Individual-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Marital (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Marital-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Maximum Initial Clothing Allowance (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Medical (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health-Counseling (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health-Counseling-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health-Evaluation (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health-Evaluation-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health-Health Related (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health-Health Related-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health-Other (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health-Other-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Injury Evaluation-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mentoring (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mentoring-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Middle School (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Monthly Clothing Allowance (RTC) (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Moving Assistance (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Nurturing Parenting-Parent Skill Trng-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Nutrition (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>OCYF Funding (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>One-on-One (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Other (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Other Alcohol Assessment (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Other Alcohol Assessment-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Other-EBP(Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>OTO Adoption Subsidy (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>PAL (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>PAL-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Parenting Assessment-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Parenting Skills (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Parenting Skills-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Parenting Skills Training (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Parenting Skills Training-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Passport Obtained (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>PCIT-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Personal Hygiene (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Post- Secondary Educ support-Gen (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Psychiatric Evaluation (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Psychiatric Evaluation-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Psychological Evaluation (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Psychological Evaluation-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Public Foster Care Resource Home-Day Care (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Public Kinship Care Res Home-Day Care (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Referral/Relocation (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Remedial/Special Education (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Rent Payments/Deposit (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Respite Care (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Respite Care-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>School/Educational Staffing (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Scouting (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Scouting-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Self-Help Group (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Self-Help Group-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Semi-Independent Living Room and Board (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Social Participation (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Special Education (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>STEPS-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Stipend (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Summer Camp Activities (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Telephone (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Translation (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Transportation assistance (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Transportation Assistance-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Tuition Waiver (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Tutoring (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Utility Payments/Deposit (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Vocational/Employment (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Vocational (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Vocational Training- General (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Wraparound-EBP (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>YMCA/YWCA (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Paid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Youth at Risk (Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Adult Literacy Services (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Alcohol Assessment (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Alcohol Assessment-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Alcohol Assessment-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Alcohol Assessment-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Budget and Financial Management- ETV (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Budget and Financial Management-Gen (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Camping (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Camping-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Camping-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Camping-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Career Preparation Empl Prg- ETV (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Career Prep Employment Prg-Gen (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Child Care (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Child Development (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Child Development-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Child Development-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Child Development-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Clothing Purchase (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Consumer Education (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Crisis Counseling (Non Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Crisis Counseling-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Crisis Counseling-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Crisis Counseling-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Dental (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Disabled Adult (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Disabled Children (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Drug/Alcohol Assessment (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Drug/Alcohol Assessment-EBP-Medicaid  (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Drug/Alcohol Assessment-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Drug/Alcohol Assessment-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Drug/Alcohol Counseling (Non Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Drug/Alcohol Counseling-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Drug/Alcohol Counseling-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Drug/Alcohol Counseling-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Drug Assessment-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Drug Assessment-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Drug Assessment-EBP-Private Ins  (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>DSS Provided Group Work (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>DSS Provided Group Work-EBP- Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>DSS Provide Group Work-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>DSS Provide Group Work-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Educ and Risk Prevention - Gen (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Educational Academic Support-ETV (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Educational Academic Support-General (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Educational-Higher Education (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Educational-High School (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Educational-Vocational (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Education and Risk Prevention- ETV (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Emergency Shelter (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Employment Counseling (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Employment Services (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Eye Care (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Family (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Family-EBP- Medicaid  (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Family-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Family-EBP-Private Ins  (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Family planning (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Family Therapeutic Rec-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Family Therapeutic Rec-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Family Therapeutic Rec-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Family Therapeutic Recreation (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Fam Support/Healthy Marriage Educ-ETV (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Fam Support/Healthy Marriage Edu-Gen (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Financial Management (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Food (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>FUP Voucher Received (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Furniture, Equipment (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Furniture (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>GED (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Group Conferencing (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Group Counseling-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Group Counseling-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Group Counseling-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Group-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Group-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Group-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Health maintenance (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Home Improvement (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Homemaker Services (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Home Management Training Health-ETV (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Home Management Training Health-Gen (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Housing Education- ETV (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Housing Education- General (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Ind Counseling-Direct-EBP-Medicaid(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Ind Counseling-Direct-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Ind Counseling-Direct-EBP-Private Ins(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Individual (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Individual Counseling (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Individual Counseling-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Individual Counseling-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Individual Counseling-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Individual-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Individual-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Individual-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Infant&amp;ToddlersPrgms(4-5)-EBP-Medicaid(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Infant&amp;ToddlersPrgms(4-5)-EBP-Other Fund(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Infant&amp;ToddlersPrgms(4-5)-EBP-PrivateIns(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Initial Life Skills Asmt-EBP-Medicaid(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Initial Life Skills Asmt-EBP-Other Fund(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Initial Life Skills Asmt-EBP-Private Ins(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Job Training-EBP (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Life Skills Instrctn-Group-EBP-Medicaid(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Life Skills Instrctn-Group-EBP-OtherFund(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Life Skills Instrctn-Group-EBP-Prvt Ins(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Life Skills Instrctn-Ind-EBP-Medicaid(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Life Skills Instrctn-Ind-EBP-Other Fund(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Life Skills Instrctn-Ind-EBP-Private Ins(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Marital (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Marital-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Marital-EBP-Other Funding Service (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Marital-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Medical (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health-Counseling (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health-Counseling-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health-Counseling-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health-Counseling-EBP-Private Ins(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health -Evaluation-EBP-Medicaid  (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health -Evaluation-EBP-Other Fund(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health -Evaluation-EBP-PrivateIns(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health-HealthRelated-EBP-Medicaid(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health-Hlth Relatd-EBP-Other Fund(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health-Hlth Relatd-EBP-PrivateIns(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health-Other (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health-Other-EBP-Medicaid  (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health-Other-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Health-Other-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Injury Evaluation-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Injury Evaluation-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mental Injury Evaluation-EBP-Private Ins(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mentoring (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mentoring-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mentoring-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Mentoring-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Moving Assistance (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Nutrition (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>OCYF Funding (Non Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Other (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Other Alcohol Assessment (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Other Alcohol Assessment-EBP-Medicaid(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Other Alcohol Assessment-EBP-Other Fund(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Other Alcohol Assessment-EBP-Private Ins(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Other Drug Assessment-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Other Drug Assessment-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Other Drug Assessment-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Other-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Other-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Other-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>PAL-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>PAL-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>PAL-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Parenting Assessment-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Parenting Assessment-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Parenting Assessment-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Parenting Skills (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Parenting Skills-EBP-Medicaid  (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Parenting Skills-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Parenting Skills-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Parenting Skills Training (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Parenting Skills Training -EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Parenting Skills Training-EBP-Other Fund(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Parenting Skills Training-EBP-PrivateIns(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>PCIT- EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>PCIT-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>PCIT-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Personal Hygiene (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Post-Secondary Educ support-Gen (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Post-Secondary Edu support-ETV (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Psychiatric Evaluation-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Psychiatric Evaluation-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Psychiatric Evaluation-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Psychological Evaluation-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Psychological Evaluation-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Psychological Evaluation-EBP-Private Ins(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Referral/Relocation (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Referral to FUP (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Remedial/Special Education (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Rent Payments/Deposit (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Respite Care-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Respite Care-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Respite Care-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>SafeCare Parent Skills Training-EBP (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>School/Educational Staffing (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Scouting-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Scouting-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Scouting-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Self-Help Group (Non Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Self-Help Group-EBP-Medicaid (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Self-Help Group-EBP-Other Fund (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Self-Help Group-EBP-Private Ins (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Social Participation (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>State Tuition Waiver (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Translation (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Transportation assistance (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>TransportationAssistance-EBP-Medicaid(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>TransportationAssistance-EBP-Other Fund(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>TransportationAssistance-EBP-Private Ins(Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Utility Payments/Deposit (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Vocational/Employment (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Vocational (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Vocational Training- ETV (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Vocational Training- General (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Wraparound (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unpaid</controllingFieldValue>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Youth at Risk (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>After care room and board</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Alternative Living Units</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Education Transportation Costs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Emergency Foster Care Retainer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Emergency Foster Home Care</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Emergency Group Shelter Care</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Family Conferencing (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>FASFA (Non-Paid)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Independent Living Residential Program</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Intermediate Foster Care</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Intermediate Foster Care Difficulty of Care</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Pre-Finalized Adoptive Home</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Both</controllingFieldValue>
+            <valueName>Restricted (Relative) Foster Care</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSN_Document__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK( SSN__c  )  ,&apos;&apos;, IF( NOT( ISBLANK( SSN_Document_ID__c  ) ) , 
+HYPERLINK(&quot;/&quot; &amp;SSN_Document_ID__c,&apos;View file&apos;,&apos;_self&apos;)&amp; &apos;               &apos; ,&apos;Upload file&apos; &amp; &apos;              &apos;)   &amp; HYPERLINK(&apos;/lightning/cmp/c__filePreviewCmp?c__recordId=&apos;&amp; Id &amp;
+&apos;&amp;c__fileType=SSN&apos;  ,IMAGE(&apos;/resource/UploadIcon&apos;,&apos;Upload&apos;,20,20) ,&apos;_self&apos;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SSN Document</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

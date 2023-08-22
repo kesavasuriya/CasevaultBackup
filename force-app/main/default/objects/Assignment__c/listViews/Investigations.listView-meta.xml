@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Investigations</fullName>
+    <booleanFilter>(1 AND 2) AND (3 OR 4)</booleanFilter>
+    <columns>Danger__c</columns>
+    <columns>Investigation__c</columns>
+    <columns>Intake_ID__c</columns>
+    <columns>Head_of_Household__c</columns>
+    <columns>CPS_Response_Type__c</columns>
+    <columns>Created_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Investigation__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Is_Assigned_user_same_as_current_user__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Assign_End_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Assign_End_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Investigations</label>
+    <sharedTo>
+        <group>Casevault_User</group>
+    </sharedTo>
+</ListView>

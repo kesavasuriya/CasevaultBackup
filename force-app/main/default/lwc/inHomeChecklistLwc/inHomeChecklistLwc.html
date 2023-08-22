@@ -1,0 +1,67 @@
+<template>
+
+    <table class="slds-table slds-table_bordered slds-border_left slds-border_right">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th></th>
+                <th>Initial Due Date</th>
+                <th>Worker Name & Completed Date</th>
+                <th>Supervisor Name & Approval Date</th>
+                <th>Next Due Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="cellHeight">
+                <td><a onclick={handleNavigate} data-name="c:contactNotesTab">Initial Face to Face</a></td>
+                <td class={notesColorCode} aria-label={notesColorCode}><lightning-formatted-date-time value={initialDate} year="numeric"
+                        month="numeric" day="numeric"></lightning-formatted-date-time></td>
+                <td>
+                    <div>{notesOwner}</div>
+                    <div><lightning-formatted-date-time value={contactDate} year="numeric" month="numeric"
+                            day="numeric"></lightning-formatted-date-time></div>
+                </td>
+                <td>N/A</td>
+                <td>N/A</td>
+            </tr>
+            <tr class="cellHeight">
+                <td><a onclick={handleNavigate} data-name="c:safecRelatedListLwc">Safe-C</a></td>
+                <td class={safecColorCode} aria-label={safecColorCode}><lightning-formatted-date-time value={initialDate} year="numeric"
+                        month="numeric" day="numeric"></lightning-formatted-date-time></td>
+                <td>
+                    <div>{safecRecord.Workers_Name__c}</div>
+                    <lightning-formatted-date-time value={safecRecord.Submitted_Date__c} year="numeric" month="numeric"
+                        day="numeric"></lightning-formatted-date-time></div>
+                </td>
+                <td>
+                    <div>{safecRecord.approverName}</div>
+                    <div><lightning-formatted-date-time value={safecRecord.approvalDate}
+                            year="numeric" month="numeric" day="numeric"></lightning-formatted-date-time></div>
+                </td>
+                <td><lightning-formatted-date-time value={safecNextDueDate} year="numeric" month="numeric"
+                        day="numeric"></lightning-formatted-date-time></td>
+            </tr>
+            <tr class="cellHeight">
+                <td><a onclick={handleNavigate} data-name="c:familyRiskReassessmentListLWC">Risk Assessment</a></td>
+                <td class={riskColorCode} aria-label={riskColorCode}><lightning-formatted-date-time value={riskAssessmentInitialDueDate}
+                        year="numeric" month="numeric" day="numeric"></lightning-formatted-date-time></td>
+                <td>
+                    <div>{riskAssessmentRecord.Workers_Name__c}</div>
+                    <lightning-formatted-date-time year="numeric" month="numeric" day="numeric"
+                        value={riskAssessmentRecord.Submitted_Date__c}></lightning-formatted-date-time></div>
+                </td>
+                <td>
+                    <!-- <div>{riskAssessmentRecord.approver}</div> -->
+                    <div>{riskAssessmentRecord.approverName}</div>
+                    <!-- <div><lightning-formatted-date-time
+                            value={riskAssessmentRecord.Safety_Assessment_Approval_Date_Time__c} year="numeric"
+                            month="numeric" day="numeric"></lightning-formatted-date-time></div> -->
+                    <div><lightning-formatted-date-time
+                        value={riskAssessmentRecord.approvalDate} year="numeric"
+                        month="numeric" day="numeric"></lightning-formatted-date-time></div>        
+                </td>
+                <td><lightning-formatted-date-time value={riskAssessmentInitialDueDate} year="numeric" month="numeric"
+                        day="numeric"></lightning-formatted-date-time></td>
+            </tr>
+        </tbody>
+    </table>
+</template>

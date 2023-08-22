@@ -1,0 +1,3 @@
+<design:component>
+	<design:attribute name="Intake_Investigation_ServiceCase"  label="Intake/Investigation/Service Case" datasource="Intake,Investigation,Service Case"/>
+</design:component>

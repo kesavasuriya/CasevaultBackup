@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_convert_to_select_person__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <label>Is convert to select person</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

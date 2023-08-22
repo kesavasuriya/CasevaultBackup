@@ -1,0 +1,43 @@
+<template>
+
+    <template if:true={loading}>
+        <lightning-spinner variant='brand' alternative-text="Loading" size='large'></lightning-spinner>
+    </template>
+
+    <lightning-card title={heading}>
+
+        <lightning-button label="New" slot="actions" onclick={handleNew}>
+        </lightning-button>
+        <lightning-datatable key-field="id" data={visibleData} columns={dataColumn} onrowaction={handleRow}
+            hide-checkbox-column="true" show-row-number-column="true" >
+        </lightning-datatable>
+        <div if:true={showMsg} class="slds-text-align_center slds-p-top_medium">
+            <b>No records found</b>
+        </div>
+
+        <div>
+            <template if:true={showChild}>
+                <c-pagination-l-w-c total-list={assessmentList} onupdate={paginationHandler}></c-pagination-l-w-c>
+            </template>
+        </div>
+
+    </lightning-card>
+
+
+    <div class="eventModal" if:true={showCmp}>
+        <c-modal-component header={header} modal-class='slds-modal slds-fade-in-open slds-modal_large'>
+            <span slot="modalClose">
+                <lightning-button-icon icon-name="utility:close" onclick={closeModal} alternative-text="close"
+                    variant="bare-inverse" class="slds-modal__close"></lightning-button-icon>
+
+                <h2 id="modal-heading-02" class="slds-text-heading_medium slds-hyphenate">Family Risk Reassessment</h2>
+            </span>
+            <span slot="modalBody">
+                <c-family-risk-reassessment-detail-l-w-c record-id={recordId} object-api-name={objectApiName} onsave={handleSave}></c-family-risk-reassessment-detail-l-w-c>
+            </span>
+        </c-modal-component>
+    </div>
+
+
+
+</template>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <assignments>
+        <name>Assign_intake_values</name>
+        <label>Assign intake values</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Intake_Purpose__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Intake__r.Service_Program__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Person_Role__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Person_Role_Dependent__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_values</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_intake_values_1</name>
+        <label>Assign intake values</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Intake_Purpose__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Intake__r.Origin</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Person_Role__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Person_Role_Dependent__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_values</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_values</name>
+        <label>Assign values</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Name</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Full_Name</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Person_Role_Formula__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Role_Formula</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Check_object</name>
+        <label>Check object</label>
+        <locationX>314</locationX>
+        <locationY>311</locationY>
+        <defaultConnector>
+            <targetReference>Assign_values</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>If_intake_with_RFS_Adult_Service</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Intake__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Intake__r.Origin</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Request for services</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Intake__r.Service_Program__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Adult Services</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_intake_values</targetReference>
+            </connector>
+            <label>If intake with RFS - Adult Service</label>
+        </rules>
+        <rules>
+            <name>If_intake_APS</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Intake__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Intake__r.Origin</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Adult Protective Services</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_intake_values_1</targetReference>
+            </connector>
+            <label>If intake - APS</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>Full_Name</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Person__r.FirstName} + &apos; &apos; + {!$Record.Person__r.LastName}</expression>
+    </formulas>
+    <formulas>
+        <name>Role_Formula</name>
+        <dataType>String</dataType>
+        <expression>IF(INCLUDES({!$Record.Person_Role__c}, &quot;Biological Child&quot;), &quot;1;&quot;, NULL) +
+IF(INCLUDES({!$Record.Person_Role__c}, &quot;Other Child (Not in Household)&quot;), &quot;2;&quot;, NULL) +
+IF(INCLUDES({!$Record.Person_Role__c}, &quot;Private Adoptive Child&quot;), &quot;3;&quot;, NULL) +
+IF(INCLUDES({!$Record.Person_Role__c}, &quot;Other Child&quot;), &quot;4;&quot;, NULL) +
+IF(INCLUDES({!$Record.Person_Role__c}, &quot;Non-Victim Child&quot;), &quot;5;&quot;, NULL) +
+IF(INCLUDES({!$Record.Person_Role__c}, &quot;Alleged Victim&quot;), &quot;6;&quot;, NULL) +
+IF(INCLUDES({!$Record.Person_Role__c}, &quot;Alleged Maltreator&quot;), &quot;7;&quot;, NULL) + 
+IF(INCLUDES({!$Record.Person_Role__c}, &quot;Adoptive Parent&quot;) ,&quot;8;&quot;, NULL) +
+IF(INCLUDES({!$Record.Person_Role__c}, &quot;Biological Parent&quot;) ,&quot;9;&quot;, NULL) +
+IF( INCLUDES({!$Record.Person_Role__c}, &quot;Legal Guardian&quot;) , &quot;LegalGuardian;&quot;, NULL) +
+IF( INCLUDES({!$Record.Person_Role__c}, &quot;Child&quot;) , &quot;Child;&quot;, NULL) +
+IF( INCLUDES({!$Record.Person_Role__c}, &quot;Caregiver&quot;) , &quot;Caregiver;&quot;, NULL)</expression>
+    </formulas>
+    <interviewLabel>JN Object Name flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>JN Object Name flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_object</targetReference>
+        </connector>
+        <object>Person__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

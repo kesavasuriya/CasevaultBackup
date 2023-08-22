@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_this_under_supervisor__c</fullName>
+    <externalId>false</externalId>
+    <formula>Select_a_Social_Worker__r.ManagerId  =  $User.Id</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Used in supervisor dashboard</inlineHelpText>
+    <label>Is this under supervisor</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

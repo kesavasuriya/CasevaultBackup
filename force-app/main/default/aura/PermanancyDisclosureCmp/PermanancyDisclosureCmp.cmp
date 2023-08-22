@@ -1,0 +1,252 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="public"
+    controller="PermanacyPlanProceedController">
+    <aura:handler name="init" value="{!this}" action="{!c.getInitialInfos}" />
+    <aura:attribute name="permanancyPlanRec" type="Permanency_Plan__c"
+        default="{'sobjectType': 'Permanency_Plan__c'}" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="onClickCurrentStage" type="Decimal" />
+    <aura:attribute name="openModal" type="boolean" />
+    <aura:attribute name="openApprovalScreen" type="boolean" />
+    <aura:attribute name="isReadOnly" type="boolean" />
+    <aura:attribute name="cpaProvider" type="Account" />
+    <c:UtilityBaseCmp aura:id="utils" />
+    <aura:attribute name="showApprovalBtn" type="boolean" default="false"></aura:attribute>
+
+    <aura:if isTrue="{!v.openModal}">
+        <section role="dialog" tabindex="-1" aria-labelledby="Submit_for_Approval" aria-modal="true"
+            aria-describedby="Submit_for_Approval" class="slds-modal slds-fade-in-open slds-modal_large">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon class="slds-modal__close" onclick="{! c.closeModel }" iconName="utility:close"
+                        variant="border-inverse" alternativeText="Close" />
+                    <h2 id="Submit_for_Approval" class="slds-text-heading_medium slds-hyphenate">Submit for Approval</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <lightning:card>
+                        <lightning:flow aura:id="flowData" onstatuschange="{!c.handleStatusChange}" />
+                    </lightning:card>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+    <lightning:layout>
+        <aura:if isTrue="{!v.permanancyPlanRec.Placement__r.Provider_Type__c == 'Public_Provider'}">
+
+            <lightning:layoutItem size="4" padding="around-small">
+                <b>Guardian ID :</b> {!v.permanancyPlanRec.Placement__r.Provider__r.Casevault_ProID__c}
+            </lightning:layoutItem>
+            <aura:set attribute="else">
+                <lightning:layoutItem size="4" padding="around-small">
+                    <b>Guardian ID :</b> {!v.cpaProvider.Casevault_ProID__c}
+                </lightning:layoutItem>
+            </aura:set>
+        </aura:if>
+        <aura:if isTrue="{!v.permanancyPlanRec.Placement__r.Provider_Type__c == 'Public_Provider'}">
+            <lightning:layoutItem size="4" padding="around-small">
+                <b>Address : </b>{!v.permanancyPlanRec.Placement__r.Provider__r.BillingStreet},
+                {!v.permanancyPlanRec.Placement__r.Provider__r.BillingCity},
+                {!v.permanancyPlanRec.Placement__r.Provider__r.BillingCountry}
+                {!v.permanancyPlanRec.Placement__r.Provider__r.BillingPostalCode}.
+            </lightning:layoutItem>
+            <aura:set attribute="else">
+                <lightning:layoutItem size="4" padding="around-small">
+                    <b>Address : </b>{!v.cpaProvider.BillingStreet}, {!v.cpaProvider.BillingCity},
+                    {!v.cpaProvider.BillingCountry}, {!v.cpaProvider.BillingPostalCode}.
+                </lightning:layoutItem>
+            </aura:set>
+        </aura:if>
+    </lightning:layout>
+    <lightning:layout class="slds-p-top_small">
+        <lightning:layoutItem size="4" padding="around-small">
+            <b>Guardian One Name :</b>&nbsp; {!v.permanancyPlanRec.Guardian_One_Name__c}
+        </lightning:layoutItem>
+        <lightning:layoutItem size="4" padding="around-small">
+            <b>Guardian One Relationship :</b>&nbsp; {!v.permanancyPlanRec.Primary_Guardian_Relationship__c}
+        </lightning:layoutItem>
+    </lightning:layout>
+    <lightning:layout>
+        <lightning:layoutItem size="4" padding="around-small">
+            <b>Guardian Two Name :</b>&nbsp; {!v.permanancyPlanRec.Guardian_Two_Name__c}
+        </lightning:layoutItem>
+        <lightning:layoutItem size="4" padding="around-small">
+            <b>Guardian Two Relationship :</b>&nbsp; {!v.permanancyPlanRec.Secondary_Guardian_Relationship__c}
+        </lightning:layoutItem>
+    </lightning:layout>
+
+
+    <lightning:recordEditForm aura:id="editForm" objectApiName="Permanency_Plan__c" recordId="{!v.recordId}"
+        onsuccess="{!c.handleOnSuccess}" onerror="{!c.handleOnError}">
+
+            <lightning:layout multipleRows="true">
+
+                <lightning:layoutItem size="10" class="slds-p-around_small">
+                    The Child has been committed to the State and placed with the provider for alteast six(6) months
+                    <span class="colorRed">*</span>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields" fieldName="Disclosure_committed_to_the_State__c"
+                        variant="label-hidden" required="true" disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="10" class="slds-p-around_small">
+                    The Provider is Approved for Guardianship Assistance Program <span class="colorRed">*</span>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields" fieldName="Disclosure_Provider_is_Approved__c"
+                        variant="label-hidden" required="true" disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="10" class="slds-p-around_small">
+                    The child must be under 18 years of age at the time of the court hearing awarding custody and
+                    guardianship <span class="colorRed">*</span>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields"
+                        fieldName="Disclosure_child_be_under_18_year_of_age__c" variant="label-hidden" required="true"
+                        disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="10" class="slds-p-around_small">
+                    Reunification and Adoption have been discussed and ruled out as permanency Plans <span
+                        class="colorRed">*</span>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields" fieldName="Reunification_and_Adoption_have_ruled__c"
+                        variant="label-hidden" required="true" disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="10" class="slds-p-around_small">
+                    Adoption has been ruled out as a permanency plan <span class="colorRed">*</span>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields" fieldName="Disclosure_Adoption_has_been_ruled_out__c"
+                        variant="label-hidden" required="true" disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="10" class="slds-p-around_small">
+                    The caregiver is able to provide a safe and stable home that promotes health, well-being and
+                    permanency for the child <span class="colorRed">*</span>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields"
+                        fieldName="Disclosure_provide_safe_and_stable_home__c" variant="label-hidden" required="true"
+                        disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="10" class="slds-p-around_small">
+                    The caregiver has an independent means of financial for themselves and their other than guardianship
+                    Assistance program <span class="colorRed">*</span>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields"
+                        fieldName="Disclosure_independent_mean_of_financial__c" variant="label-hidden" required="true"
+                        disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="10" class="slds-p-around_small">
+                    The caregiver attended an orientation meeting or received an overview from the caseworker <span
+                        class="colorRed">*</span>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields" fieldName="Disclosure_orientation_meeting_or__c"
+                        variant="label-hidden" required="true" disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="10" class="slds-p-around_small">
+                    The caregiver and the caseworker have discussed the requirements and expectation for participating
+                    in the guardianship Assistance Program <span class="colorRed">*</span>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields"
+                        fieldName="Disclosure_caseworker_discussed_require__c" variant="label-hidden" required="true"
+                        disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="10" class="slds-p-around_small">
+                    The caregiver agrees to participate in Guardianship Assistance Program. <span
+                        class="colorRed">*</span>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields" fieldName="Disclosure_participate_in_Guardianship__c"
+                        variant="label-hidden" required="true" disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="10" class="slds-p-around_small">
+                    The caregiver entered an agreement prior to the awarded custody and guardianship by the court in
+                    order to receive the assistance payment. <span class="colorRed">*</span>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields"
+                        fieldName="Disclosure_agreement_prior_to_the_award__c" variant="label-hidden" required="true"
+                        disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="10" class="slds-p-around_small">
+                    The caregiver is willing to complete authorization of mental health history. <span
+                        class="colorRed">*</span>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields" fieldName="Disclosure_authorization_mental_health__c"
+                        variant="label-hidden" required="true" disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="10" class="slds-p-around_small">
+                    The caregiver understands that the caseworker will provide aftercare service and two final visits to
+                    the home within sixty(60) days of guardianship being awarded. The caregiver understands that visits
+                    should take place in the caregiver's home and include all family members. <span
+                        class="colorRed">*</span>
+
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields" fieldName="Disclosure_provide_aftercare_service__c"
+                        variant="label-hidden" required="true" disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="10" class="slds-p-around_small">
+                    The caregiver understands that the out-of-home services will be closed after the recession of court
+                    commitment and the award of guardianship unless the caseworker and family agree that additional
+                    services are needed. <span class="colorRed">*</span>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields"
+                        fieldName="Disclosure_services_will_be_closed_after__c" variant="label-hidden" required="true"
+                        disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="10" class="slds-p-around_small">
+                    The caregiver must complete annual reconsideration to continue the assistance.The caregiver must
+                    notify the local department of social services and the court if there are any changes in child's
+                    living arrangements. <span class="colorRed">*</span>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields" fieldName="Disclosure_Annual_Reconsideration__c"
+                        variant="label-hidden" required="true" disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="10" class="slds-p-around_small">
+                    The Caregiver understands that the assistance will immediately be suspended if the child is no
+                    longer living with a guardian. The assistance will be terminated if the child is not returned to the
+                    custody of the guardian within sixty(60) days. <span class="colorRed">*</span>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields" fieldName="Disclosure_Assistance_will_Immediately__c"
+                        variant="label-hidden" required="true" disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="10" class="slds-p-around_small">
+                    If the child is 14 years of age. Has an age appropriate consultation take place with the child
+                    regarding the guardianship arrangement
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" class="slds-p-around_small">
+                    <lightning:inputField fieldName="Disclosure_Age_Appropriate_Consultation__c" variant="label-hidden"
+                        disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="10" class="slds-p-around_small">
+                    Does the child demonstrate a strong attachment to the primary guardian?
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" class="slds-p-around_small">
+                    <lightning:inputField fieldName="Disclosure_Attachment_primary_guardian__c" variant="label-hidden"
+                        disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="10" class="slds-p-around_small">
+                    Does the child demonstrate a strong attachment to the secondary guardian?
+                </lightning:layoutItem>
+                <lightning:layoutItem size="2" class="slds-p-around_small">
+                    <lightning:inputField fieldName="Disclosure_to_the_secondary_guardian__c" variant="label-hidden"
+                        disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+            </lightning:layout>
+
+            <div class="slds-text-align_right">
+                <lightning:button variant="brand" type="submit" name="save" label="Save" onclick="{!c.onFormValidate}"
+                    disabled="{!v.isReadOnly}" />
+                <lightning:button variant="brand" type="submit" name="submitApproval" label="Submit for Approval"
+                    onclick="{!c.handleOnSubmitApprovalAndSave}" disabled="{!v.isReadOnly}" />
+            </div>
+    </lightning:recordEditForm>
+</aura:component>

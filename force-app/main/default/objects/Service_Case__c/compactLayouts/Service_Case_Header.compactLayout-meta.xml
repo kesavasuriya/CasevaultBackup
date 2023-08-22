@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Case_Header</fullName>
+    <fields>Name</fields>
+    <fields>Intake__c</fields>
+    <fields>OwnerId</fields>
+    <fields>Approval_Status__c</fields>
+    <fields>CreatedById</fields>
+    <fields>LastModifiedById</fields>
+    <label>Service Case Header</label>
+</CompactLayout>

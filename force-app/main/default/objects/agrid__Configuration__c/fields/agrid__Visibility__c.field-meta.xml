@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>agrid__Visibility__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Visibility</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Private</fullName>
+                <default>true</default>
+                <label>Only to me</label>
+            </value>
+            <value>
+                <fullName>Public</fullName>
+                <default>false</default>
+                <label>All users</label>
+            </value>
+            <value>
+                <fullName>Public Internal</fullName>
+                <default>false</default>
+                <label>All Internal Users</label>
+            </value>
+            <value>
+                <fullName>Public External</fullName>
+                <default>false</default>
+                <label>All External Users</label>
+            </value>
+            <value>
+                <fullName>Specific Users</fullName>
+                <default>false</default>
+                <label>Specific Users</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

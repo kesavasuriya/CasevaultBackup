@@ -1,0 +1,20 @@
+<template>
+    <lightning-button variant="base" label="New" onclick={handleClick}></lightning-button>
+
+    <div class="eventModal" if:true={invokeFlow}>
+            <c-modal-component header="Education" modal-class='slds-modal slds-fade-in-open slds-modal_small'>
+                <span slot="modalClose">
+					<lightning-button-icon icon-name="utility:close"
+											onclick={handleCancel}
+											alternative-text="close"
+											variant="bare-inverse"
+											class="slds-modal__close"></lightning-button-icon>
+                            <h2 id="modal-heading-02" class="slds-text-heading_medium slds-hyphenate">New Education</h2>
+                        </span>
+
+                <span slot="modalBody">
+					<lightning-flow flow-api-name="Education_flow" flow-input-variables={inputvariable} onstatuschange={handleStatusChange}></lightning-flow>
+                </span>
+            </c-modal-component>
+    </div>
+</template>

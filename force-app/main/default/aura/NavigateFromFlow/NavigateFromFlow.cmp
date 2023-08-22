@@ -1,0 +1,4 @@
+<aura:component implements="lightning:availableForFlowActions">
+	<aura:attribute name="contentDocumentID" type="String"></aura:attribute>
+    <lightning:navigation aura:id="navService"/>
+</aura:component>

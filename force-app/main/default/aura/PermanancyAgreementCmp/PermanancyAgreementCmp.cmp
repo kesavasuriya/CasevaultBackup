@@ -1,0 +1,375 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="public"
+    controller="PermanacyPlanProceedController">
+
+    <aura:attribute name="permanancyPlanRec" type="Permanency_Plan__c"
+        default="{'sobjectType': 'Permanency_Plan__c'}" />
+    <aura:attribute name="RateRec" type="Rate__c" default="{'sobjectType': 'Rate__c'}" />
+    <aura:attribute name="RateViewRec" type="Rate__c" default="{'sobjectType': 'Rate__c'}" />
+    <aura:attribute name="RateList" type="List" default="[]" />
+    <aura:attribute name="columns" type="List" default="[]" />
+    <aura:attribute name="rateTypePicklistOption" type="List" />
+    <aura:attribute name="filetype" type="List" default="['.png', '.jpg', '.jpeg']" />
+    <aura:attribute name="showCompletionModal" type="Boolean" default="false" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="providerId" type="String" />
+    <aura:attribute name="onClickCurrentStage" type="Decimal" />
+    <aura:attribute name="openRateModal" type="Boolean" default="false" />
+    <aura:attribute name="showRateModal" type="Boolean" default="false" />
+    <aura:attribute name="isReadOnly" type="boolean" default="false" />
+    <aura:attribute name="isAllReadOnly" type="boolean" default="false" />
+    <aura:attribute name="cpaProvider" type="Account" />
+    <c:UtilityBaseCmp aura:id="utils" />
+    <aura:handler name="init" value="{!this}" action="{!c.getInitialInfos}" />
+    <aura:attribute name="openModal" type="boolean" />
+    <aura:attribute name="agreementDate" type="Date" />
+    <aura:attribute name="openApprovalScreen" type="boolean" />
+    <aura:attribute name="receivedTCA" type="String" />
+
+    <aura:if isTrue="{!v.openModal}">
+        <section role="dialog" tabindex="-1" aria-labelledby="Submit_for_Approval" aria-modal="true"
+            aria-describedby="Submit_for_Approval" class="slds-modal slds-fade-in-open slds-modal_small">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon class="slds-button_icon-inverse slds-modal__close" onclick="{! c.closeModel }"
+                        iconName="utility:close" variant="bare-inverse" alternativeText="Close" />
+                    <h2 id="Submit_for_Approval" class="slds-text-heading_medium slds-hyphenate">Submit for Approval</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <lightning:card>
+                        <lightning:flow aura:id="flowData" onstatuschange="{!c.handleStatusChange}" />
+                    </lightning:card>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+    <aura:if isTrue="{!v.permanancyPlanRec.Placement__r.Provider_Type__c == 'Public_Provider'}">
+        <lightning:layoutItem size="4" padding="around-small">
+            <b>Guardian ID :</b> {!v.permanancyPlanRec.Placement__r.Provider__r.Casevault_ProID__c}
+        </lightning:layoutItem>
+        <aura:set attribute="else">
+            <lightning:layoutItem size="4" padding="around-small">
+                <b>Guardian ID :</b> {!v.cpaProvider.Casevault_ProID__c}
+            </lightning:layoutItem>
+        </aura:set>
+    </aura:if>
+
+        <lightning:layout class="slds-p-top_small">
+            <lightning:layoutItem size="4" padding="around-small">
+                <b>Guardian One Name :</b>&nbsp; {!v.permanancyPlanRec.Guardian_One_Name__c}
+            </lightning:layoutItem>
+            <lightning:layoutItem size="4" padding="around-small">
+                <b>Guardian One Relationship :</b>&nbsp; {!v.permanancyPlanRec.Primary_Guardian_Relationship__c}
+            </lightning:layoutItem>
+        </lightning:layout>
+        <lightning:layout>
+            <lightning:layoutItem size="4" padding="around-small">
+                <b>Guardian Two Name :</b>&nbsp; {!v.permanancyPlanRec.Guardian_Two_Name__c}
+            </lightning:layoutItem>
+            <lightning:layoutItem size="4" padding="around-small">
+                <b>Guardian Two Relationship :</b>&nbsp; {!v.permanancyPlanRec.Secondary_Guardian_Relationship__c}
+            </lightning:layoutItem>
+        </lightning:layout>
+
+
+    <lightning:recordEditForm aura:id="editForm" objectApiName="Permanency_Plan__c" recordId="{!v.recordId}"
+        onsuccess="{!c.handleOnSuccess}" onerror="{!c.handleOnError}">
+            <lightning:layout multipleRows="true">
+
+                <lightning:layoutItem size="6" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields" fieldName="Agreement_Start_Date__c"
+                        variant="label-stacked" required="true" disabled="{!v.isReadOnly}"
+                        onchange="{!c.onAgreementChange}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="6" class="slds-p-around_small">
+                    <lightning:inputField fieldName="Agreement_End_Date__c" variant="label-stacked"
+                        disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="12" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields" fieldName="Agreement_Caregiver_completed__c"
+                        variant="label-hidden" required="true" disabled="{!v.isReadOnly}" />
+                    <div>Caregiver completed a comprehensive home</div>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="12" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields" fieldName="The_caregiver_awarded_custody__c"
+                        variant="label-hidden" required="true" disabled="{!v.isReadOnly}" />
+                    <div>The caregiver awarded custody</div>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="12" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields"
+                        fieldName="All_Placements_and_Removal_have_been_End__c" variant="label-hidden" required="true"
+                        disabled="true" />
+                    <div>All Placements and Removal have been End</div>
+                </lightning:layoutItem>
+            </lightning:layout>
+
+        <lightning:card title="Signatre Dates">
+            <lightning:layout>
+                <lightning:layoutItem size="4" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields" fieldName="Agrrement_Guardian_One_Date__c"
+                        variant="label-stacked" required="true" disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="4" class="slds-p-around_small">
+                    <lightning:inputField fieldName="Guardian_Two_Date__c" variant="label-stacked"
+                        disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+                <lightning:layoutItem size="4" class="slds-p-around_small">
+                    <lightning:inputField aura:id="requiredFields" fieldName="Agreement_LDSS_Director_Designee__c"
+                        variant="label-stacked" required="true" disabled="{!v.isReadOnly}" />
+                </lightning:layoutItem>
+            </lightning:layout>
+        </lightning:card>
+
+        <lightning:card title="Finalization Checklist">
+            <lightning:layout>
+                <lightning:layoutItem size="4" padding="around-small">
+                    <lightning:inputField aura:id="requiredFields" fieldName="Is_Child_receiving_TCA__c"
+                        variant="label-stacked" required="true" disabled="{!v.isReadOnly}"
+                        onchange="{!c.onPicklistChange}" />
+                </lightning:layoutItem>
+            </lightning:layout>
+            <aura:if isTrue="{!v.receivedTCA == 'Yes'}">
+                <lightning:layout>
+                    <lightning:layoutItem size="4" padding="around-small">
+                        <lightning:inputField aura:id="requiredFields" fieldName="TCA_Amount__c" variant="label-stacked"
+                            required="true" disabled="{!v.isReadOnly}" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="4" padding="around-small">
+                        <lightning:inputField fieldName="Has_notification_been_sent_to_TCA__c" variant="label-stacked"
+                            disabled="{!v.isReadOnly}" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="4" padding="around-small">
+                        <lightning:inputField fieldName="Child_support_has_been_notified__c" variant="label-stacked"
+                            disabled="{!v.isReadOnly}" />
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </aura:if>
+        </lightning:card>
+
+        <div class="slds-text-align_right">
+            <lightning:button variant="brand" iconName="utility:add" label="Rate" title="Rate" onclick="{!c.addRate }"
+                disabled="{!v.isAllReadOnly}" />
+        </div>
+
+        <aura:if isTrue="{!v.RateList.length }">
+            <lightning:card title="Rate List">
+                <div>
+                    <lightning:datatable columns="{! v.columns }" data="{!v.RateList}" keyField="Id" resizeStep="20"
+                        hideCheckboxColumn="true" onrowaction="{! c.handleRowAction }" />
+                </div>
+            </lightning:card>
+        </aura:if>
+
+        <aura:if isTrue="{!v.showRateModal}">
+            <c:ModalCmp>
+                <aura:set attribute="header">
+                    <lightning:buttonIcon iconName="utility:close" onclick="{! c.closeRateModal }"
+                        alternativeText="close" variant="bare-inverse" class="slds-modal__close" />
+                    <div class="fontSize">RATE DETAILS</div>
+                </aura:set>
+                <aura:set attribute="body">
+                    <lightning:card title="">
+                        <lightning:layout>
+                            <lightning:layoutItem size="3" padding="around-small">
+                                <lightning:combobox name="input19" value="{!v.RateViewRec.Rate_Type__c}"
+                                    options="{!v.rateTypePicklistOption}" label="Rate Type" disabled="true" />
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="3" padding="around-small">
+                                <lightning:input type="Date" dateStyle="short" label="Rate Begin Date"
+                                    value="{!v.RateViewRec.Rate_Begin_Date__c}" disabled="true" />
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="3" padding="around-small">
+                                <lightning:input type="Date" dateStyle="short" aura:id="requiredFields"
+                                    label="Rate End Date" value="{!v.RateViewRec.Rate_End_Date__c}" required="true"
+                                    disabled="true" />
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="3" padding="around-small">
+                                <lightning:input type="Date" dateStyle="short" label="Rate Approval Date"
+                                    readonly="true" value="{!v.RateViewRec.Rate_Approval_Date__c}" disabled="true" />
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                        <lightning:layout>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <lightning:input type="Number" label="$Negotiated Amount"
+                                    value="{!v.RateViewRec.Negotiated_Amount__c}" formatter="currency" pattern="[0-9]"
+                                    currencyCode="USD" disabled="true" />
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <lightning:input type="Date" dateStyle="short" label="Negotiated Date"
+                                    value="{!v.RateViewRec.Negotiated_Date__c}" disabled="true" />
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="4" padding="around-small">
+                                <lightning:input type="Checkbox" checked="{!v.RateViewRec.Rate_Override__c}"
+                                    label="Rate Override" disabled="true" />
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                        <lightning:layout>
+                            <lightning:layoutItem size="12" padding="around-small">
+                                <lightning:textarea label="Notes" value="{!v.RateViewRec.Notes__c}" disabled="true" />
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </lightning:card>
+                </aura:set>
+                <aura:set attribute="footer">
+                    <div class="slds-text-align_right">
+                        <lightning:button iconName="utility:close" variant="destructive" label="Close" title="Close"
+                            onclick="{!c.closeRateModal}" />
+                    </div>
+                </aura:set>
+            </c:ModalCmp>
+        </aura:if>
+        <aura:if isTrue="{!v.openRateModal}">
+            <lightning:card title="Rate Details">
+                <lightning:layout>
+                    <lightning:layoutItem size="3" padding="around-small">
+                        <lightning:combobox name="input19" value="{!v.RateRec.Rate_Type__c}"
+                            options="{!v.rateTypePicklistOption}" label="Rate Type" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="3" padding="around-small">
+                        <lightning:input type="Date" dateStyle="short" label="Rate Begin Date"
+                            value="{!v.RateRec.Rate_Begin_Date__c}" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="3" padding="around-small">
+                        <lightning:input type="Date" dateStyle="short" aura:id="requiredFields" label="Rate End Date"
+                            value="{!v.RateRec.Rate_End_Date__c}" required="true" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="3" padding="around-small">
+                        <lightning:input type="Date" dateStyle="short" label="Rate Approval Date" readonly="true"
+                            value="{!v.RateRec.Rate_Approval_Date__c}" />
+                    </lightning:layoutItem>
+                </lightning:layout>
+                <lightning:layout>
+                    <lightning:layoutItem size="4" padding="around-small">
+                        <lightning:input type="Number" label="$Negotiated Amount"
+                            value="{!v.RateRec.Negotiated_Amount__c}" formatter="currency" pattern="[0-9]"
+                            currencyCode="USD" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="4" padding="around-small">
+                        <lightning:input type="Date" dateStyle="short" label="Negotiated Date"
+                            value="{!v.RateRec.Negotiated_Date__c}" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="4" padding="around-small">
+                        <lightning:input type="Checkbox" checked="{!v.RateRec.Rate_Override__c}"
+                            label="Rate Override" />
+                    </lightning:layoutItem>
+                </lightning:layout>
+                <lightning:layout>
+                    <lightning:layoutItem size="12" padding="around-small">
+                        <lightning:textarea label="Notes" value="{!v.RateRec.Notes__c}" />
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </lightning:card>
+        </aura:if>
+        <lightning:card title="Document">
+            <lightning:layout>
+                <lightning:layoutItem size="12" padding="around-small">
+
+                    <lightning:fileUpload label="Upload" name="fileUploader" multiple="true" accept="{!v.filetype}"
+                        recordId="{!v.recordId}" onuploadfinished="{!c.handleUploadFinished}"
+                        disabled="{!v.isAllReadOnly}" />
+                </lightning:layoutItem>
+            </lightning:layout>
+            <aura:set attribute="footer">
+                <div class="slds-text-align_right">
+                    <lightning:button variant="brand" label="Completion Criteria" title="Completion Criteria"
+                        onclick="{!c.showModal}" disabled="{!v.isAllReadOnly}" />
+                    <lightning:button variant="brand" type="submit" name="save" label="Save"
+                        onclick="{!c.onFormValidate}" disabled="{!v.isAllReadOnly}" />
+                    <lightning:button name="submitApproval" type="submit" label="Submit for Approval"
+                        onclick="{!c.handleOnSubmitApprovalAndSave}" disabled="{!v.isAllReadOnly}" />
+                </div>
+            </aura:set>
+        </lightning:card>
+
+    </lightning:recordEditForm>
+
+    <aura:if isTrue="{!v.showCompletionModal}">
+        <c:ModalCmp>
+            <aura:set attribute="header">
+                <lightning:buttonIcon iconName="utility:close" onclick="{! c.closeCompletionModel }"
+                    alternativeText="close" variant="bare-inverse" class="slds-modal__close" />
+                <h1>GAP COMPLETION CRITERIA</h1>
+            </aura:set>
+            <aura:set attribute="body">
+                    <lightning:layout>
+                        <lightning:layoutItem size="10" padding="around-small">
+                            a.Intended action notice(DHR/SSA 1068)
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="2" padding="around-small">
+
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                    <lightning:layout>
+                        <lightning:layoutItem size="10" padding="around-small">
+                            b.Relative Caregiver application for gap
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="2" padding="around-small">
+
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                    <lightning:layout>
+                        <lightning:layoutItem size="10" padding="around-small">
+                            c.Negotiated Amount______Assistance amount negotiation consideration
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="2" padding="around-small">
+
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                    <lightning:layout>
+                        <lightning:layoutItem size="10" padding="around-small">
+                            i.SSI,SSDI, Survivor benefits
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="2" padding="around-small">
+
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                    <lightning:layout>
+                        <lightning:layoutItem size="10" padding="around-small">
+                            ii.Application of the caregiver to become the Rep.Payee for SSA benefits.
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="2" padding="around-small">
+
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                    <lightning:layout>
+                        <lightning:layoutItem size="10" padding="around-small">
+                            iii.Child Support,application to become the payee for CS
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="2" padding="around-small">
+
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                    <lightning:layout>
+                        <lightning:layoutItem size="10" padding="around-small">
+                            d.Written GAP Agreement
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="2" padding="around-small">
+
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                    <lightning:layout>
+                        <lightning:layoutItem size="10" padding="around-small">
+                            e.Signed agreement by relative Caregiver
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="2" padding="around-small">
+
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                    <lightning:layout>
+                        <lightning:layoutItem size="10" padding="around-small">
+                            f.Notice to FIA of need to end the TCA payment, Where application
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="2" padding="around-small">
+
+                        </lightning:layoutItem>
+                    </lightning:layout>
+            </aura:set>
+            <aura:set attribute="footer">
+                <div class="slds-text-align_right">
+                    <lightning:button iconName="utility:close" variant="destructive" label="Close" title="Close"
+                        onclick="{!c.closeCompletionModel}" />
+                </div>
+            </aura:set>
+        </c:ModalCmp>
+    </aura:if>
+</aura:component>

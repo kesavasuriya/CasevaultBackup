@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>agrid__Configuration_Group__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Configuration Group</label>
+    <referenceTo>agrid__Configuration_Group__c</referenceTo>
+    <relationshipLabel>Related Configurations</relationshipLabel>
+    <relationshipName>Related_Configurations</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>true</writeRequiresMasterRead>
+</CustomField>

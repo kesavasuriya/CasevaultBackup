@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SAFEC_Decision_Check__c</fullName>
+    <externalId>false</externalId>
+    <label>SAFEC Decision Check</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Child is Safe (Influences 1-18 Marked No)</fullName>
+                <default>false</default>
+                <label>Child is safe (influences 1-18 marked no)</label>
+            </value>
+            <value>
+                <fullName>Child is conditionally Safe (Any Influences 1-16 is Checked And Thcompleted Safety Plan That is Signed by All Parties)</fullName>
+                <default>false</default>
+                <label>Child is conditionally safe (any influences 1-16 is checked and the completed safety plan that is signed by all parties)</label>
+            </value>
+            <value>
+                <fullName>Child is Conditionally Safe (Any Influences 17-18 is Checked Yes All Actions in A Required Case Staffing Have Been Implemented)</fullName>
+                <default>false</default>
+                <label>Child is conditionally safe (any influences 17-18 is checked yes all actions in a required case staffing have been implemented)</label>
+            </value>
+            <value>
+                <fullName>Child is UnSafe</fullName>
+                <default>false</default>
+                <label>Child is unsafe</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

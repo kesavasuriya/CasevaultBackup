@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referral_Source__c</fullName>
+    <externalId>false</externalId>
+    <label>Referral Source</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Court referral</fullName>
+                <default>false</default>
+                <label>Court referral</label>
+            </value>
+            <value>
+                <fullName>Self-referral</fullName>
+                <default>false</default>
+                <label>Self-referral</label>
+            </value>
+            <value>
+                <fullName>Agency Recruitment effort</fullName>
+                <default>false</default>
+                <label>Agency Recruitment effort</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

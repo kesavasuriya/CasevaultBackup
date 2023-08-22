@@ -1,0 +1,15 @@
+.cellHeight {
+    height: 60px;
+   }
+.Red {
+    background-color: #E00000 !important;
+    color: white;
+}
+.Yellow {
+    background-color: #FFFF00 !important;
+    color: #696969;
+}
+.Green {
+    background-color: #068809 !important;
+    color: white;
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Screened_In</fullName>
+    <columns>Danger__c</columns>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>contact__c</columns>
+    <columns>CASES.ORIGIN</columns>
+    <columns>Received_Date__c</columns>
+    <columns>Intake_Approval_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Intake_Recommendations__c</field>
+        <operation>equals</operation>
+        <value>Screen In</value>
+    </filters>
+    <filters>
+        <field>Intake_Approval_Status__c</field>
+        <operation>equals</operation>
+        <value>Approved</value>
+    </filters>
+    <label>Screened In</label>
+</ListView>

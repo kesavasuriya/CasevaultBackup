@@ -1,0 +1,65 @@
+<template>
+    <lightning-record-edit-form object-api-name="Collateral__c" record-id={collateralId} onsubmit={handleSubmit} onsuccess={handleSuccess}>
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input-field field-name="Prefix__c"></lightning-input-field>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input-field field-name="First_Name__c" required></lightning-input-field>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input-field field-name="Middle_Name__c"></lightning-input-field>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input-field field-name="Last_Name__c" required></lightning-input-field>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input-field field-name="Suffix__c"></lightning-input-field>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input type="date" date-style="short" label="Date of Birth" name="Date_of_Birth__c" variant="label-inline"
+                value={collateralRecord.Date_of_Birth__c} 
+                onchange={handleChange}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input type="date" date-style="short" label="Start Date" name="Start_Date__c" variant="label-inline"
+                value={collateralRecord.Start_Date__c} required="true"
+                onchange={handleChange}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input type="date" date-style="short" label="End Date" name="End_Date__c"
+                value={collateralRecord.End_Date__c} required="true" variant="label-inline"
+                onchange={handleChange}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input-field field-name="Organization__c"></lightning-input-field>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input-field field-name="Title__c"></lightning-input-field>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input-field field-name="Contact_Number__c"></lightning-input-field>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-input-field field-name="Email__c"></lightning-input-field>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" padding="around-small">
+                <lightning-dual-listbox label="Persons" options={personsPicklist} source-label="Available"
+                selected-label="Selected" onchange={handlePersonsChange}></lightning-dual-listbox>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" padding="around-small">
+                <template for:each={copyofRelationship} for:item="row" for:index="index">
+                    <div key={row.Id}>{row.Person__c}</div>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <div class="slds-text-align_center slds-p-top_small footerStyle">
+            <lightning-button label="Cancel" onclick={handleCancel} title="Cancel"></lightning-button>
+            <lightning-button class="slds-p-left_small" label="Save" type="submit" title="Save"></lightning-button>
+        </div>
+    </lightning-record-edit-form>
+</template>

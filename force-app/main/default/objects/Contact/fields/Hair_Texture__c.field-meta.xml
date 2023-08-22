@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Hair_Texture__c</fullName>
+    <externalId>false</externalId>
+    <label>Hair Texture</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Straight</fullName>
+                <default>false</default>
+                <label>Straight</label>
+            </value>
+            <value>
+                <fullName>Wavy</fullName>
+                <default>false</default>
+                <label>Wavy</label>
+            </value>
+            <value>
+                <fullName>Curly</fullName>
+                <default>false</default>
+                <label>Curly</label>
+            </value>
+            <value>
+                <fullName>Coiled/Kinky</fullName>
+                <default>false</default>
+                <label>Coiled/Kinky</label>
+            </value>
+            <value>
+                <fullName>Bald/Balding</fullName>
+                <default>false</default>
+                <label>Bald/Balding</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

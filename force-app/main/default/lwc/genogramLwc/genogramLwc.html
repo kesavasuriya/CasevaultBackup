@@ -1,0 +1,33 @@
+<template>
+  <!-- <div class="circle-container">
+    <template for:each={personRecordList} for:item="person">
+      <div key={person.Id} class="person">
+        <div class="person-name">{person.Name}</div>
+      </div>
+    </template>
+  </div> -->
+
+  <!-- <div class="circle-container" onclick={handlePersonChange}>
+    <div class="person center" >
+      <div class="image-container">
+        <img src={parentRec.Person_Image_URL__c} class="rounded-image"
+                      alt="Profile photo" />
+        </div>
+      <div class="person-name">{parentRec.Name}</div>
+    </div>
+    <template for:each={circleRecords} for:item="person" for:index="index">
+        <div key={person.Id} class="getId person" data-id={person.Id}  style={person.position}>
+          <div class="image-container" data-id={person.Id} >
+          <img src={person.Person_Image_URL__c}  class="rounded-image"
+												alt="Profile photo" />
+          </div>
+          <div class="person-name">{person.Name}</div>
+        </div>
+    </template>
+  </div> -->
+
+  <div class="slds-p-around_large slds-text-align_left"><lightning-input  type="toggle" label="Case View"></lightning-input></div>
+    <canvas class="cssStyle" id="myCanvas" width="5000" height="5000"></canvas>
+
+
+</template>

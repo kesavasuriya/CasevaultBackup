@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Adoptive Parent</fullName>
+        <default>false</default>
+        <label>Adoptive Parent</label>
+    </customValue>
+    <customValue>
+        <fullName>Adult Biological Child</fullName>
+        <default>false</default>
+        <label>Adult Biological Child</label>
+    </customValue>
+    <customValue>
+        <fullName>Adult Child</fullName>
+        <default>false</default>
+        <label>Adult Child</label>
+    </customValue>
+    <customValue>
+        <fullName>Advocate</fullName>
+        <default>false</default>
+        <label>Advocate</label>
+    </customValue>
+    <customValue>
+        <fullName>Alleged Maltreator</fullName>
+        <default>false</default>
+        <label>Alleged Maltreator</label>
+    </customValue>
+    <customValue>
+        <fullName>Alleged Victim</fullName>
+        <default>false</default>
+        <label>Alleged Victim</label>
+    </customValue>
+    <customValue>
+        <fullName>Biological Child</fullName>
+        <default>false</default>
+        <label>Biological Child</label>
+    </customValue>
+    <customValue>
+        <fullName>Biological Parent</fullName>
+        <default>false</default>
+        <label>Biological Parent</label>
+    </customValue>
+    <customValue>
+        <fullName>Caregiver</fullName>
+        <default>false</default>
+        <label>Caregiver</label>
+    </customValue>
+    <customValue>
+        <fullName>CASA Worker</fullName>
+        <default>false</default>
+        <label>CASA Worker</label>
+    </customValue>
+    <customValue>
+        <fullName>Child</fullName>
+        <default>false</default>
+        <label>Child</label>
+    </customValue>
+    <customValue>
+        <fullName>Child Attorney</fullName>
+        <default>false</default>
+        <label>Child Attorney</label>
+    </customValue>
+    <customValue>
+        <fullName>Child Day Care Provider</fullName>
+        <default>false</default>
+        <label>Child Day Care Provider</label>
+    </customValue>
+    <customValue>
+        <fullName>Conservator</fullName>
+        <default>false</default>
+        <label>Conservator</label>
+    </customValue>
+    <customValue>
+        <fullName>Court Therapist</fullName>
+        <default>false</default>
+        <label>Court Therapist</label>
+    </customValue>
+    <customValue>
+        <fullName>CPS Hist. Clrnc.- Requestor</fullName>
+        <default>false</default>
+        <label>CPS Hist. Clrnc.- Requestor</label>
+    </customValue>
+    <customValue>
+        <fullName>CPS Hist. Clrnc. - Subject</fullName>
+        <default>false</default>
+        <label>CPS Hist. Clrnc. - Subject</label>
+    </customValue>
+    <customValue>
+        <fullName>Enhanced Aftercare Recipient</fullName>
+        <default>false</default>
+        <label>Enhanced Aftercare Recipient</label>
+    </customValue>
+    <customValue>
+        <fullName>Foster Parent</fullName>
+        <default>false</default>
+        <label>Foster Parent</label>
+    </customValue>
+    <customValue>
+        <fullName>Friend/Neighbor</fullName>
+        <default>false</default>
+        <label>Friend/Neighbor</label>
+    </customValue>
+    <customValue>
+        <fullName>I &amp; R Participant</fullName>
+        <default>false</default>
+        <label>I &amp; R Participant</label>
+    </customValue>
+    <customValue>
+        <fullName>Legal Guardian</fullName>
+        <default>false</default>
+        <label>Legal Guardian</label>
+    </customValue>
+    <customValue>
+        <fullName>Legal Representive</fullName>
+        <default>false</default>
+        <label>Legal Representive</label>
+    </customValue>
+    <customValue>
+        <fullName>Medical Professional</fullName>
+        <default>false</default>
+        <label>Medical Professional</label>
+    </customValue>
+    <customValue>
+        <fullName>Mental Health Professional</fullName>
+        <default>false</default>
+        <label>Mental Health Professional</label>
+    </customValue>
+    <customValue>
+        <fullName>Non-Victim Child</fullName>
+        <default>false</default>
+        <label>Non-Victim Child</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Adult</fullName>
+        <default>false</default>
+        <label>Other Adult</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Adult Child</fullName>
+        <default>false</default>
+        <label>Other Adult Child</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Child</fullName>
+        <default>false</default>
+        <label>Other Child</label>
+    </customValue>
+    <customValue>
+        <fullName>Potential Provider</fullName>
+        <default>false</default>
+        <label>Potential Provider</label>
+    </customValue>
+    <customValue>
+        <fullName>Private Adoptive Child</fullName>
+        <default>false</default>
+        <label>Private Adoptive Child</label>
+    </customValue>
+    <customValue>
+        <fullName>Provider</fullName>
+        <default>false</default>
+        <label>Provider</label>
+    </customValue>
+    <customValue>
+        <fullName>Relative</fullName>
+        <default>false</default>
+        <label>Relative</label>
+    </customValue>
+    <customValue>
+        <fullName>Reported Adult</fullName>
+        <default>false</default>
+        <label>Reported Adult</label>
+    </customValue>
+    <customValue>
+        <fullName>Requestor of Services - Adult Residential</fullName>
+        <default>false</default>
+        <label>Requestor of Services - Adult Residential</label>
+    </customValue>
+    <customValue>
+        <fullName>Teacher-Educational Staff</fullName>
+        <default>false</default>
+        <label>Teacher-Educational Staff</label>
+    </customValue>
+    <customValue>
+        <fullName>Law Enforcement</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Law Enforcement</label>
+    </customValue>
+    <customValue>
+        <fullName>Casehead</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Casehead</label>
+    </customValue>
+    <customValue>
+        <fullName>Decision Maker</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Decision Maker</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Adult (Not in Household)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Adult (Not in Household)</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Child (Not in Household)</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Other Child (Not in Household)</label>
+    </customValue>
+    <customValue>
+        <fullName>Reporter</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Reporter</label>
+    </customValue>
+    <customValue>
+        <fullName>Self</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Self</label>
+    </customValue>
+    <customValue>
+        <fullName>Residential Facility Staff</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Residential Facility Staff</label>
+    </customValue>
+    <masterLabel>Person Role</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

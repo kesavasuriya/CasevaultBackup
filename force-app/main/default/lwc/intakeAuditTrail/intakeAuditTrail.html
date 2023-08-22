@@ -1,0 +1,27 @@
+<template>
+    <div class="slds-text-align_right"><lightning-button label="Audit Trail" title="Audit Trail" onclick={handleClick}></lightning-button></div>
+
+    <div class="eventModal" if:true={showModal}>
+            <c-modal-component header={header} modal-class='slds-modal slds-fade-in-open slds-modal_small'>
+                <span slot="modalClose">
+                    <lightning-button-icon icon-name="utility:close" onclick={closeModal}
+                        alternative-text="close" variant="bare-inverse" class="slds-modal__close">
+                    </lightning-button-icon>
+                    <h2 id="modal-heading-02" class="slds-text-heading_medium slds-hyphenate">Audit Trail</h2>
+                </span>
+
+                <span slot="modalBody">
+
+                    <lightning-datatable
+                    key-field="Id"
+                    columns={columns}
+                    hide-checkbox-column show-row-number-column="true">
+                </lightning-datatable>
+
+                </span>
+                <span slot="modalFooter">
+                    <div><lightning-button label="Close" title="close" onclick={closeModal}></lightning-button></div>
+                </span>
+                </c-modal-component>
+                </div>
+</template>

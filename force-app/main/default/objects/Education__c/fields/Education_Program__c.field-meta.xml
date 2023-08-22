@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Education_Program__c</fullName>
+    <externalId>false</externalId>
+    <label>Education Program</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not enrolled</fullName>
+                <default>false</default>
+                <label>Not enrolled</label>
+            </value>
+            <value>
+                <fullName>Not school-age</fullName>
+                <default>false</default>
+                <label>Not school-age</label>
+            </value>
+            <value>
+                <fullName>Elementary school</fullName>
+                <default>false</default>
+                <label>Elementary school</label>
+            </value>
+            <value>
+                <fullName>Secondary school</fullName>
+                <default>false</default>
+                <label>Secondary school</label>
+            </value>
+            <value>
+                <fullName>Post-secondary education or training - Full Time</fullName>
+                <default>false</default>
+                <label>Post-secondary education or training - Full Time</label>
+            </value>
+            <value>
+                <fullName>Post-secondary education or training - Part Time</fullName>
+                <default>false</default>
+                <label>Post-secondary education or training - Part Time</label>
+            </value>
+            <value>
+                <fullName>College - Full time</fullName>
+                <default>false</default>
+                <label>College - Full time</label>
+            </value>
+            <value>
+                <fullName>College - Part time</fullName>
+                <default>false</default>
+                <label>College - Part time</label>
+            </value>
+            <value>
+                <fullName>College / University</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>College / University</label>
+            </value>
+            <value>
+                <fullName>GED</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>GED</label>
+            </value>
+            <value>
+                <fullName>Home and Hospital</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Home and Hospital</label>
+            </value>
+            <value>
+                <fullName>Infant and Toddler</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Infant and Toddler</label>
+            </value>
+            <value>
+                <fullName>Not in School</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not in School</label>
+            </value>
+            <value>
+                <fullName>Other (Specify)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other (Specify)</label>
+            </value>
+            <value>
+                <fullName>Pre-School/Head Start</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pre-School/Head Start</label>
+            </value>
+            <value>
+                <fullName>Regular</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Regular</label>
+            </value>
+            <value>
+                <fullName>Special Ed</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Special Ed</label>
+            </value>
+            <value>
+                <fullName>Trade School</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Trade School</label>
+            </value>
+            <value>
+                <fullName>Type III</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Type III</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>Vocational/ Technical Training</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Vocational/ Technical Training</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

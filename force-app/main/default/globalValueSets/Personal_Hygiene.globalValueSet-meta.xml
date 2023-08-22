@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Bathes Self</fullName>
+        <default>false</default>
+        <label>Bathes Self</label>
+    </customValue>
+    <customValue>
+        <fullName>Dresses Self</fullName>
+        <default>false</default>
+        <label>Dresses Self</label>
+    </customValue>
+    <customValue>
+        <fullName>Fixes Hair</fullName>
+        <default>false</default>
+        <label>Fixes Hair</label>
+    </customValue>
+    <customValue>
+        <fullName>Menstruation</fullName>
+        <default>false</default>
+        <label>Menstruation</label>
+    </customValue>
+    <customValue>
+        <fullName>Needs Assistance with Bathing Self</fullName>
+        <default>false</default>
+        <label>Needs Assistance with Bathing Self</label>
+    </customValue>
+    <customValue>
+        <fullName>Needs Assistance with Brushing Teeth</fullName>
+        <default>false</default>
+        <label>Needs Assistance with Brushing Teeth</label>
+    </customValue>
+    <customValue>
+        <fullName>Needs Assistance with Dressing Self</fullName>
+        <default>false</default>
+        <label>Needs Assistance with Dressing Self</label>
+    </customValue>
+    <customValue>
+        <fullName>Needs Assistance with Fixing Hair</fullName>
+        <default>false</default>
+        <label>Needs Assistance with Fixing Hair</label>
+    </customValue>
+    <customValue>
+        <fullName>Needs Assistance with Removing Clothes</fullName>
+        <default>false</default>
+        <label>Needs Assistance with Removing Clothes</label>
+    </customValue>
+    <customValue>
+        <fullName>Needs Assistance with Using the Toilet</fullName>
+        <default>false</default>
+        <label>Needs Assistance with Using the Toilet</label>
+    </customValue>
+    <customValue>
+        <fullName>Needs Assistance with Washing and Drying Hands</fullName>
+        <default>false</default>
+        <label>Needs Assistance with Washing and Drying Hands</label>
+    </customValue>
+    <customValue>
+        <fullName>Needs Assistance with Washing Hair</fullName>
+        <default>false</default>
+        <label>Needs Assistance with Washing Hair</label>
+    </customValue>
+    <customValue>
+        <fullName>Other (Specify)</fullName>
+        <default>false</default>
+        <label>Other (Specify)</label>
+    </customValue>
+    <customValue>
+        <fullName>Toilet Alone</fullName>
+        <default>false</default>
+        <label>Toilet Alone</label>
+    </customValue>
+    <customValue>
+        <fullName>Toilet Trained</fullName>
+        <default>false</default>
+        <label>Toilet Trained</label>
+    </customValue>
+    <customValue>
+        <fullName>Unknown</fullName>
+        <default>false</default>
+        <label>Unknown</label>
+    </customValue>
+    <customValue>
+        <fullName>Washes and Dries Hands</fullName>
+        <default>false</default>
+        <label>Washes and Dries Hands</label>
+    </customValue>
+    <customValue>
+        <fullName>Washes Hair</fullName>
+        <default>false</default>
+        <label>Washes Hair</label>
+    </customValue>
+    <masterLabel>Personal Hygiene</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,25 @@
+<template>
+    <lightning-card>
+     <lightning-button label="New" onclick={handleNew} slot="actions"></lightning-button>
+    </lightning-card>
+    <lightning-datatable data={collateralRecords} columns={collateralColumn} key-field="id" 
+							onrowaction={handleRowAction} hide-checkbox-column="true" show-row-number-column="true"></lightning-datatable>
+
+
+        
+
+                            <div class="eventModal" if:true={showModal}>
+                                <c-modal-component header={header} modal-class='slds-modal slds-fade-in-open slds-modal_large'>
+                                    <span slot="modalClose">
+                                        <lightning-button-icon icon-name="utility:close" onclick={closeModal} alternative-text="close"
+                                            variant="bare-inverse" class="slds-modal__close"></lightning-button-icon>
+                        
+                                        <h2 id="modal-heading-02" class="slds-text-heading_medium slds-hyphenate">Collateral</h2>
+                                    </span>
+                                    <span slot="modalBody">
+                                       <c-collateral-details-lwc record-id={recordId} onclose={closeEventModal} object-api-name={objectApiName}></c-collateral-details-lwc>
+                                    </span>
+                                </c-modal-component>
+                            </div>
+
+                        </template>

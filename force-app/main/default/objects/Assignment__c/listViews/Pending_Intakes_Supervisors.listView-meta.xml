@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pending_Intakes_Supervisors</fullName>
+    <booleanFilter>1 AND 2 AND 5 AND (3 OR 4)</booleanFilter>
+    <columns>Danger__c</columns>
+    <columns>Intake__c</columns>
+    <columns>Head_of_Household__c</columns>
+    <columns>Intake_Purpose__c</columns>
+    <columns>Received_Date__c</columns>
+    <columns>Intake_Status__c</columns>
+    <columns>Select_a_Social_Worker__c</columns>
+    <columns>Created_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Intake__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Is_this_under_supervisor__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Assign_End_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Assign_End_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>Intake_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Approved</value>
+    </filters>
+    <label>Pending Intakes</label>
+    <sharedTo>
+        <group>Casevault_Supervisor</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Assigned_user_same_as_current_user__c</fullName>
+    <description>Used in Casevault user dashboard</description>
+    <externalId>false</externalId>
+    <formula>Select_a_Social_Worker__c  =  $User.Id</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is Assigned user same as current user</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

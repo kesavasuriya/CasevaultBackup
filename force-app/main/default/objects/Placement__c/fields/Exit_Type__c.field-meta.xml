@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exit_Type__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>1.Change in Placement should be used when a child is physically moving to a different placement/provider
+2.Change in Placement Structure should be used when a child is not physically moving to a different placement/provider but the structure is changing (i.e. from Regular Foster Care to Pre-Adoptive Home)
+3.Permanently Leaving Custody and Care should be used when a child is exiting foster care (Commitment Rescinded or changed to an Order of Protective Supervision)</inlineHelpText>
+    <label>Exit Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Change in Placement</fullName>
+                <default>false</default>
+                <label>Change in Placement</label>
+            </value>
+            <value>
+                <fullName>Change in Placement Structure</fullName>
+                <default>false</default>
+                <label>Change in Placement Structure</label>
+            </value>
+            <value>
+                <fullName>Permanently Leaving Custody and Care</fullName>
+                <default>false</default>
+                <label>Permanently Leaving Custody &amp; Care</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

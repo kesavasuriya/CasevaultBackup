@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>missing_Tribe_2</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(  Child_a_member_in_federal_Tribe__c  ,&apos;Yes&apos;)  &amp;&amp; ISNULL(  If_yes_identify_the_federally_tribe_s__c  )</errorConditionFormula>
+    <errorMessage>Please select one tribe</errorMessage>
+</ValidationRule>

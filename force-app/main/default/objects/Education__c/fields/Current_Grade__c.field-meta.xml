@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Grade__c</fullName>
+    <externalId>false</externalId>
+    <label>Current Grade</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Kindergarten</fullName>
+                <default>false</default>
+                <label>Kindergarten</label>
+            </value>
+            <value>
+                <fullName>First grade</fullName>
+                <default>false</default>
+                <label>First grade</label>
+            </value>
+            <value>
+                <fullName>Second grade</fullName>
+                <default>false</default>
+                <label>Second grade</label>
+            </value>
+            <value>
+                <fullName>Third grade</fullName>
+                <default>false</default>
+                <label>Third grade</label>
+            </value>
+            <value>
+                <fullName>Fourth grade</fullName>
+                <default>false</default>
+                <label>Fourth grade</label>
+            </value>
+            <value>
+                <fullName>Fifth grade</fullName>
+                <default>false</default>
+                <label>Fifth grade</label>
+            </value>
+            <value>
+                <fullName>Sixth grade</fullName>
+                <default>false</default>
+                <label>Sixth grade</label>
+            </value>
+            <value>
+                <fullName>Seventh grade</fullName>
+                <default>false</default>
+                <label>Seventh grade</label>
+            </value>
+            <value>
+                <fullName>Eight grade</fullName>
+                <default>false</default>
+                <label>Eight grade</label>
+            </value>
+            <value>
+                <fullName>Ninth grade</fullName>
+                <default>false</default>
+                <label>Ninth grade</label>
+            </value>
+            <value>
+                <fullName>Tenth grade</fullName>
+                <default>false</default>
+                <label>Tenth grade</label>
+            </value>
+            <value>
+                <fullName>Eleventh grade</fullName>
+                <default>false</default>
+                <label>Eleventh grade</label>
+            </value>
+            <value>
+                <fullName>Twelfth grade</fullName>
+                <default>false</default>
+                <label>Twelfth grade</label>
+            </value>
+            <value>
+                <fullName>GED</fullName>
+                <default>false</default>
+                <label>GED</label>
+            </value>
+            <value>
+                <fullName>Post-secondary</fullName>
+                <default>false</default>
+                <label>Post-secondary</label>
+            </value>
+            <value>
+                <fullName>College</fullName>
+                <default>false</default>
+                <label>College</label>
+            </value>
+            <value>
+                <fullName>Not school-age</fullName>
+                <default>false</default>
+                <label>Not school-age</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

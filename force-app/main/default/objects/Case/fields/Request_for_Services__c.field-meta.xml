@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_for_Services__c</fullName>
+    <externalId>false</externalId>
+    <label>Request for services</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Service_Program__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adult Guardianship</fullName>
+                <default>false</default>
+                <label>Adult Guardianship</label>
+            </value>
+            <value>
+                <fullName>Adult Foster Care</fullName>
+                <default>false</default>
+                <label>Adult Foster Care</label>
+            </value>
+            <value>
+                <fullName>Social Services for Adults</fullName>
+                <default>false</default>
+                <label>Social Services for Adults</label>
+            </value>
+            <value>
+                <fullName>In-Home Services</fullName>
+                <default>false</default>
+                <label>In-Home Services</label>
+            </value>
+            <value>
+                <fullName>Private Adoption Subsidy</fullName>
+                <default>false</default>
+                <label>Private Adoption Subsidy</label>
+            </value>
+            <value>
+                <fullName>ICPC</fullName>
+                <default>false</default>
+                <label>ICPC</label>
+            </value>
+            <value>
+                <fullName>CPS History Clearance</fullName>
+                <default>false</default>
+                <label>CPS History Clearance</label>
+            </value>
+            <value>
+                <fullName>ASCRS-Adoption Search Contact</fullName>
+                <default>false</default>
+                <label>ASCRS-Adoption Search Contact</label>
+            </value>
+            <value>
+                <fullName>ICAMA</fullName>
+                <default>false</default>
+                <label>ICAMA</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>In-Home Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Private Adoption Subsidy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>ICPC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>CPS History Clearance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>ASCRS-Adoption Search Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>ICAMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <valueName>Adult Guardianship</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <valueName>Adult Foster Care</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <valueName>Social Services for Adults</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

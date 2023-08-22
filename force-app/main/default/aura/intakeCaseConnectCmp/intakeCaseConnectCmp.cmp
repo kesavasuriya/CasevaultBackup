@@ -1,0 +1,28 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+        
+    <aura:attribute name="openModal" type="boolean" default="false"/>
+    
+	<force:recordData aura:id="forceRecord"
+    	recordId="{!v.recordId}" 
+    	fields="Intake_Approval_Status__c"
+    	recordUpdated="{!c.recordUpdated}"/>
+    
+    <aura:if isTrue="{!v.openModal}">
+        <div class="slds-modal slds-fade-in-open slds-backdrop">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{!c.closeModal }"
+                                          alternativeText="close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close"/>
+                </div>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <lightning:flow aura:id="flowData" onstatuschange="{!c.handleStatusChange}"/>
+                </div>
+            </div>
+    	</div>
+    </aura:if>
+    
+    
+</aura:component>

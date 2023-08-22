@@ -1,0 +1,6 @@
+.iconcolor{
+	color : white!important;
+}
+.slds-current-color .slds-icon {
+    --slds-c-icon-color-foreground: white!important;
+}

@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Person_Role_Dependent__c</fullName>
+    <externalId>false</externalId>
+    <label>Person role</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Intake_Purpose__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Person_Role</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Adult Biological Child</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Adult Child</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Advocate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Alleged Maltreator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Alleged Victim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Biological Child</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Biological Parent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Caregiver</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Child</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <valueName>Conservator</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Friend/Neighbor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>I &amp; R Participant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Legal Guardian</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Legal Representive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Medical Professional</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Mental Health Professional</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Other Adult</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Other Adult Child</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Provider</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Relative</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <valueName>Reported Adult</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <valueName>Requestor of Services - Adult Residential</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Adult Protective Services</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Adult Services</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Teacher-Educational Staff</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Adoptive Parent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>CASA Worker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Child Attorney</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Child Day Care Provider</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Court Therapist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>CPS Hist. Clrnc.- Requestor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>CPS Hist. Clrnc. - Subject</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Enhanced Aftercare Recipient</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Foster Parent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Non-Victim Child</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Other Child</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Potential Provider</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Child Protective Services</controllingFieldValue>
+            <controllingFieldValue>Request for services</controllingFieldValue>
+            <controllingFieldValue>Information and Referral</controllingFieldValue>
+            <controllingFieldValue>Child Welfare Services</controllingFieldValue>
+            <valueName>Private Adoptive Child</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

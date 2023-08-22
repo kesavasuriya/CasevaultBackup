@@ -1,0 +1,96 @@
+<apex:page controller="safetyPlanPdfController" standardStylesheets="true"  showHeader="false" sidebar="false" renderAs="pdf">
+    
+    <apex:panelGrid columns="2" width="100%">
+        <h6 style='font-Size:35px; text-align:center'>Safety Plan</h6>
+        <apex:panelGrid columns="1" width="100%">
+            <img src="{!$Resource.CasevaultImage}" width="160px" height="140px" align="right"/>
+        </apex:panelGrid>           
+    </apex:panelGrid> 
+    <div class='container-fluid'> 
+        <div style="width:700px; height:2px;background:orange;"></div>
+    </div>  
+    
+    
+    <div style="padding-top:10px"><span >Assessment Name : <b>{!assessmentRecord.Name}</b></span>
+        <span style="padding-left:150px;">Date Time Assessment Initiated : <b><apex:outputText value="{0,date,MM/dd/yy 'at' HH:mm a}">
+            <apex:param value="{!assessmentRecord.SAFEC_Date_Time_Assessment_Initiated__c}"/>
+            </apex:outputText></b></span>
+    </div>
+    <div style="padding-top:10px;padding-bottom:10px">
+        <span>Worker Name : <b>{!assessmentRecord.CreatedBy.Name}</b></span>
+    </div>
+    <div style="padding-bottom:10px">
+        <span >Supervisor Name : <b>{!assessmentRecord.Supervisor_Approver__r.Name}</b></span>
+    </div>
+    <div class="gridtable">
+        <table style="border: 1px solid black;border-collapse: collapse;">
+            
+            <tr>
+                <th style='border: 1px solid black;border-collapse: collapse;text-align: center;background-color:rgb(128,128,128) !important;'>Danger Influence Number from the SAFE_C </th>
+                <th style='border: 1px solid black;border-collapse: collapse;text-align: center;background-color:rgb(128,128,128) !important;'>Specific Danger Influence (Specifically Identify individuals and the issue)</th>
+                <th style='border: 1px solid black;border-collapse: collapse;text-align: center;background-color:rgb(128,128,128) !important;'>Action Required (Clearly identify resourrces/individuals and/or actions that need to occur in order to help address the Danger influences)</th>
+                <th style='border: 1px solid black;border-collapse: collapse;text-align: center;background-color:rgb(128,128,128) !important;'>Date to be completed</th>
+                <th style='border: 1px solid black;border-collapse: collapse;text-align: center;background-color:rgb(128,128,128) !important;'>Responsible Parties</th>
+                <th style='border: 1px solid black;border-collapse: collapse;text-align: center;background-color:rgb(128,128,128) !important;'>Re-evaluation Date</th>     
+            </tr>
+            
+            
+            
+            <apex:repeat value="{!safetyPlanList}" var="rec">
+                
+                <tr style="page-break-inside:avoid;">
+                    <td style='border: 1px solid black;border-collapse: collapse;text-align: center;'>{!rec.Question_Name__c}</td>                   
+                    <td style='border: 1px solid black;border-collapse: collapse;text-align: center;'>{!rec.Specific_Danger_Influence__c}</td>                   
+                    <td style='border: 1px solid black;border-collapse: collapse;text-align: center;'>{!rec.Action_Required__c}</td>                   
+                    <td style='border: 1px solid black;border-collapse: collapse;text-align: center;'>
+                        <apex:outputText value="{0,date,MM/dd/yy}">
+                            <apex:param value="{!rec.Date_to_be_Completed__c}"/>
+                        </apex:outputText>
+                    </td>                   
+                    <td style='border: 1px solid black;border-collapse: collapse;text-align: center;'>{!rec.Responsible_Partie__r.Name}</td>                   
+                    <td style='border: 1px solid black;border-collapse: collapse;text-align: center;'>
+                        <apex:outputText value="{0,date,MM/dd/yy}">
+                            <apex:param value="{!rec.Re_evaluation_Date__c}"/>
+                        </apex:outputText>
+                    </td>                   
+                    
+                </tr>
+            </apex:repeat>
+            
+        </table>  
+    </div>
+    <apex:pageBlock >
+        <apex:pageBlockSection collapsible="false" columns="2">
+            <apex:pageblocksectionitem >
+                <apex:outputpanel >
+                    
+                    <div style="page-break-inside:avoid;padding:3px;">
+                        <p style="padding-top:2px;padding-bottom:2px;"><b>{!assessmentRecord.CreatedBy.Name}</b></p>
+                        <img style="height:150px;width:250px;border:solid;" src="{!assessmentRecord.Case_Worker_Signature__c}"></img> 
+                    <p><b>Signature Date : </b><apex:outputText value="{0,date,MM/dd/yy}">
+                        <apex:param value="{!assessmentRecord.Caseworker_Signature_Date__c}"/>
+                        </apex:outputText></p> 
+                    
+                </div>   
+            </apex:outputpanel>
+            
+        </apex:pageblocksectionitem>
+        <apex:repeat value="{!personList}" var="person">
+            <apex:pageblocksectionitem >
+                <apex:outputpanel >
+                    <div style="page-break-inside:avoid;padding:3px;">
+                        
+                        <p style="padding-top:2px;padding-bottom:2px;"><b>{!person.Person__r.Name}</b></p>
+                        <img style="height:150px;width:250px;border:solid;" src="{!person.Signature__c}"></img>  
+                    <p><b>Signature Date : </b><apex:outputText value="{0,date,MM/dd/yy}">
+                        <apex:param value="{!person.Signature_Date__c}"/>
+                        </apex:outputText></p>
+                    
+                </div> 
+            </apex:outputpanel>
+            
+        </apex:pageblocksectionitem>
+    </apex:repeat>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:page>

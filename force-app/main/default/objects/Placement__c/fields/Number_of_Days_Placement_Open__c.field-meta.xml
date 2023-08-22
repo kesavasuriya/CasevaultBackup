@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Days_Placement_Open__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(
+IF(ISPICKVAL(Placement_Living_Arrangement_Type__c ,&apos;Placement&apos;), 
+
+IF(ISBLANK(End_Date__c),
+IF(DATEVALUE(Begin_Date__c)==TODAY(),0,TODAY()- DATEVALUE(Begin_Date__c)),
+End_Date__c - DATEVALUE(Begin_Date__c)),
+
+
+IF(ISBLANK(End_Date__c),
+IF(Start_Date__c==TODAY(),0,TODAY()- Start_Date__c), 
+End_Date__c - Start_Date__c))
+
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Number of Days Placement Open</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,44 @@
+<template>
+
+    <table class="slds-table slds-table_bordered slds-border_left slds-border_right">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Child Name">Child Name</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Age">Age</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Client ID">Client ID</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="close">Cancel</div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <template for:each={childList} for:index="index" for:item="row">
+                <tr key={row.Id}>
+                    <td data-label=chidName>
+                        <div id={row.chidName} accesskey={row.chidName} class="slds-truncate" title={row.chidName}> {row.chidName}
+                        </div>
+                    </td>
+                    <td data-label="age">
+                        <div id={row.age} accesskey={row.age} class="slds-truncate" title={row.age}> {row.age}</div>
+                    </td>
+                    <td data-label="childId">
+                        <div id={row.clientId} accesskey={row.clientId}  class="slds-truncate" title={row.clientId}> {row.clientId}
+                        </div>
+                    </td>
+                    <td>
+                        <div id={row.Id} class="slds-truncate">
+                            <lightning-button-icon icon-name="utility:close" name={index} alternative-text="close"
+                                title="close" onclick={handleRemoveChild} disabled={readOnly}></lightning-button-icon>
+                        </div>
+                    </td>
+                </tr>
+            </template>
+        </tbody>
+    </table>
+</template>

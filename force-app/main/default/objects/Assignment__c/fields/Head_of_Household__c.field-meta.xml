@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Head_of_Household__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+ NOT( ISBLANK( Service_Case__c ) ) ,  Service_Case__r.Head_of_Household__r.FirstName  &amp;  &apos; &apos; &amp; Service_Case__r.Head_of_Household__r.MiddleName &amp; &apos; &apos; &amp;   Service_Case__r.Head_of_Household__r.LastName  &amp; &apos; &apos; &amp; Service_Case__r.Head_of_Household__r.Suffix , 
+ IF(  NOT( ISBLANK( Investigation__c ) ) , Investigation__r.Head_of_Household__r.FirstName &amp; &apos; &apos; &amp;  Investigation__r.Head_of_Household__r.MiddleName  &amp; &apos; &apos; &amp;  Investigation__r.Head_of_Household__r.LastName &amp; &apos; &apos;  &amp;  Investigation__r.Head_of_Household__r.Suffix, 
+IF(  NOT( ISBLANK(Intake__c ) ) , Intake__r.contact__r.FirstName &amp; &apos; &apos; &amp;  Intake__r.contact__r.MiddleName  &amp; &apos; &apos; &amp;  Intake__r.contact__r.LastName &amp; &apos; &apos;  &amp;  Intake__r.contact__r.Suffix, &apos;&apos;
+) 
+) 
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Head of Household</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

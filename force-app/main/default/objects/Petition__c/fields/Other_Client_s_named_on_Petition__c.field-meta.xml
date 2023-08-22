@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Client_s_named_on_Petition__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Other Client&apos;s named on Petition</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Petitions (Other Client&apos;s named on Petition)</relationshipLabel>
+    <relationshipName>Petitions9</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

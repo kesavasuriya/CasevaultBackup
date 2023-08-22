@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Information_and_Referral__c</fullName>
+    <externalId>false</externalId>
+    <label>Information and Referral</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Job Search</fullName>
+                <default>false</default>
+                <label>Job Search</label>
+            </value>
+            <value>
+                <fullName>Environmental Emergency Assistance - Non</fullName>
+                <default>false</default>
+                <label>Environmental Emergency Assistance - Non</label>
+            </value>
+            <value>
+                <fullName>Environmental Emergency Assistance-Aged</fullName>
+                <default>false</default>
+                <label>Environmental Emergency Assistance-Aged</label>
+            </value>
+            <value>
+                <fullName>Parental Stress</fullName>
+                <default>false</default>
+                <label>Parental Stress</label>
+            </value>
+            <value>
+                <fullName>Foster Care Provider Interest</fullName>
+                <default>false</default>
+                <label>Foster Care Provider Interest</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>I-R - Non-Aged</fullName>
+                <default>false</default>
+                <label>I-R - Non-Aged</label>
+            </value>
+            <value>
+                <fullName>Worker Assigned</fullName>
+                <default>false</default>
+                <label>Worker Assigned</label>
+            </value>
+            <value>
+                <fullName>Clothing</fullName>
+                <default>false</default>
+                <label>Clothing</label>
+            </value>
+            <value>
+                <fullName>Rental Assistance</fullName>
+                <default>false</default>
+                <label>Rental Assistance</label>
+            </value>
+            <value>
+                <fullName>Shelter</fullName>
+                <default>false</default>
+                <label>Shelter</label>
+            </value>
+            <value>
+                <fullName>Custody Issues</fullName>
+                <default>false</default>
+                <label>Custody Issues</label>
+            </value>
+            <value>
+                <fullName>I&amp;R - Aged</fullName>
+                <default>false</default>
+                <label>I&amp;R - Aged</label>
+            </value>
+            <value>
+                <fullName>Legal Issues</fullName>
+                <default>false</default>
+                <label>Legal Issues</label>
+            </value>
+            <value>
+                <fullName>FIP-Family Investment Center</fullName>
+                <default>false</default>
+                <label>FIP-Family Investment Center</label>
+            </value>
+            <value>
+                <fullName>Food</fullName>
+                <default>false</default>
+                <label>Food</label>
+            </value>
+            <value>
+                <fullName>Uncontrollable Child</fullName>
+                <default>false</default>
+                <label>Uncontrollable Child</label>
+            </value>
+            <value>
+                <fullName>To Be A Volunteer</fullName>
+                <default>false</default>
+                <label>To Be A Volunteer</label>
+            </value>
+            <value>
+                <fullName>WIC</fullName>
+                <default>false</default>
+                <label>WIC</label>
+            </value>
+            <value>
+                <fullName>Kinship Information</fullName>
+                <default>false</default>
+                <label>Kinship Information</label>
+            </value>
+            <value>
+                <fullName>Child Support</fullName>
+                <default>false</default>
+                <label>Child Support</label>
+            </value>
+            <value>
+                <fullName>Crisis Intervention</fullName>
+                <default>false</default>
+                <label>Crisis Intervention</label>
+            </value>
+            <value>
+                <fullName>Health Need</fullName>
+                <default>false</default>
+                <label>Health Need</label>
+            </value>
+            <value>
+                <fullName>Housing</fullName>
+                <default>false</default>
+                <label>Housing</label>
+            </value>
+            <value>
+                <fullName>Adaption Interest</fullName>
+                <default>false</default>
+                <label>Adaption Interest</label>
+            </value>
+            <value>
+                <fullName>Substance Abuse</fullName>
+                <default>false</default>
+                <label>Substance Abuse</label>
+            </value>
+            <value>
+                <fullName>I&amp;R - Family</fullName>
+                <default>false</default>
+                <label>I&amp;R - Family</label>
+            </value>
+            <value>
+                <fullName>Day Care</fullName>
+                <default>false</default>
+                <label>Day Care</label>
+            </value>
+            <value>
+                <fullName>Domestic Violence</fullName>
+                <default>false</default>
+                <label>Domestic Violence</label>
+            </value>
+            <value>
+                <fullName>MEAP</fullName>
+                <default>false</default>
+                <label>MEAP</label>
+            </value>
+            <value>
+                <fullName>Environmental Emergency Assistance</fullName>
+                <default>false</default>
+                <label>Environmental Emergency Assistance</label>
+            </value>
+            <value>
+                <fullName>Telephone Number</fullName>
+                <default>false</default>
+                <label>Telephone Number</label>
+            </value>
+            <value>
+                <fullName>Mental Health Need</fullName>
+                <default>false</default>
+                <label>Mental Health Need</label>
+            </value>
+            <value>
+                <fullName>Adult Protective Service</fullName>
+                <default>false</default>
+                <label>Adult Protective Service</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

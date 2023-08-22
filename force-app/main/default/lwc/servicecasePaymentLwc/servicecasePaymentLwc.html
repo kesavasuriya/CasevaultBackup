@@ -1,0 +1,40 @@
+<template>
+    <div class="slds-box slds-theme_shade slds-theme_alert-texture">
+    <lightning-layout multiple-rows="true">
+        <lightning-layout-item size="4" padding="around-small">
+            <h6>Head of Household : <b>{servicecaseRecord.headofhousehold}</b></h6>
+        </lightning-layout-item>
+        <lightning-layout-item size="4" padding="around-small">
+            <h6>Service Case ID : <b>{servicecaseRecord.Name}</b></h6>
+        </lightning-layout-item>
+        <lightning-layout-item size="4" padding="around-small">
+            <h6>Current Date : <b><lightning-formatted-date-time value={todayDate} year="numeric" month="numeric"
+                        day="numeric" time-zone="UTC"></lightning-formatted-date-time></b></h6>
+        </lightning-layout-item>
+        <lightning-layout-item size="4" padding="around-small">
+            <h6>Case Total Payment: <b>$ {totalAmount}</b></h6>
+        </lightning-layout-item>
+    </lightning-layout>
+</div>
+<div class="slds-box">
+    <lightning-accordion allow-multiple-sections-open="true">
+        <template for:each={personsRecord} for:item="row" for:index="index">
+            <div key={row.Id} class="slds-p-around_small">
+            <lightning-accordion-section  label={row.Person__r.Name}>
+                <lightning-layout slot="actions">
+                    <lightning-layout-item  padding="around-small">
+                        Person Total Payments : <b>$ {row.childPayment}</b>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small">
+                        <div class="slds-theme_success slds-badge">Active</div>
+                    </lightning-layout-item>
+                </lightning-layout>
+                
+                <lightning-datatable key-field="Id" data={row.paymentsLst} columns={paymentColumns} aria-label="Payments"
+                    hide-checkbox-column></lightning-datatable>
+            </lightning-accordion-section>
+        </div>
+        </template>
+    </lightning-accordion>
+</div>
+</template>

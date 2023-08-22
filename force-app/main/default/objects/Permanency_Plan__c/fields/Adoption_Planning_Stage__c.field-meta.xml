@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Adoption_Planning_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Adoption Planning Stage</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1</fullName>
+                <default>true</default>
+                <label>Adoption Efforts</label>
+            </value>
+            <value>
+                <fullName>2</fullName>
+                <default>false</default>
+                <label>Emotional Tiles</label>
+            </value>
+            <value>
+                <fullName>3</fullName>
+                <default>false</default>
+                <label>Narrative</label>
+            </value>
+            <value>
+                <fullName>4</fullName>
+                <default>false</default>
+                <label>Applicable Child Assessment</label>
+            </value>
+            <value>
+                <fullName>5</fullName>
+                <default>false</default>
+                <label>Disclosure Checklist</label>
+            </value>
+            <value>
+                <fullName>DISCLOSURE CHECKLIST</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>DISCLOSURE CHECKLIST</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

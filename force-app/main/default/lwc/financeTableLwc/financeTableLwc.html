@@ -1,0 +1,71 @@
+<template>
+	<template if:true={loading}>
+		<lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+	</template>
+	<template if:false={showPayment}>
+		<lightning-card>
+			<div slot="actions">
+
+				<lightning-input label="Search" aria-label="search" name="enter-search" variant="label-hidden"
+					id="search" aria-errormessage="search" type="search"></lightning-input>
+			</div>
+
+			<lightning-datatable key-field="Id" data={visibleProviders} columns={providerColumns} hide-checkbox-column
+				onrowaction={handleProviderRowAction} aria-label="Providers" default-sort-direction={defaultSortDirection}
+				sorted-direction={sortDirection}
+				sorted-by={sortedBy}
+				onsort={onHandleSort}>
+			</lightning-datatable>
+			<template if:true={showPage1}>
+				<c-pagination-l-w-c total-list={providers} onupdate={providerPaginationHandler}></c-pagination-l-w-c>
+			</template>
+		</lightning-card>
+	</template>
+	<template if:true={showPayment}>
+		<div class="slds-p-around_xx-small slds-text-align_right"><lightning-button label="Back"
+			onclick={goBack}></lightning-button></div>
+
+		<lightning-tabset>
+			
+			<lightning-tab label="Payment Summary">
+
+				<lightning-datatable key-field="Id" data={providerPayments} columns={providerPaymentColumns}
+					hide-checkbox-column onrowaction={handleProviderPaymentRowAction} aria-label="Payment Summary">
+				</lightning-datatable>
+
+				<div class="slds-p-around_large"></div>
+				<lightning-card title="Payment Details">
+
+
+					<lightning-datatable key-field="Id" data={paymentRecords} columns={paymentColumns}
+						aria-label="Payment Details" hide-checkbox-column>
+					</lightning-datatable>
+
+				</lightning-card>
+			</lightning-tab>
+
+			<lightning-tab label="Receivable Summary">
+
+				<lightning-datatable key-field="Id" data={receivablePayments} columns={providerReceivableColumns}
+					hide-checkbox-column onrowaction={handleProviderPaymentRowAction} aria-label="Receivable Summary">
+				</lightning-datatable>
+
+				<div class="slds-p-around_large"></div>
+				<lightning-card title="Receivable Details">
+
+
+					<lightning-datatable key-field="Id" data={receivableRecords} columns={receivablePaymentColumns}
+						aria-label="Payment Details" hide-checkbox-column>
+					</lightning-datatable>
+
+				</lightning-card>
+
+			</lightning-tab>
+
+			
+
+		</lightning-tabset>
+
+	</template>
+</template>
+</template>

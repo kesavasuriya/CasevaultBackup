@@ -1,0 +1,24 @@
+.footerStyle {
+    position: sticky !important;
+    bottom: 0px !important;
+    background-color: white !important;
+}
+.checkboxUI {
+    display: inline-block;
+}
+.wrapText {
+    white-space: normal !important;
+    word-break: break-word !important;
+}
+.img {
+    height:150px;
+    width:300px;
+    border:solid;
+    
+    
+}
+datepicker {
+    border-right: none !important;
+    border-left: none !important;
+max-width: none !important;
+}

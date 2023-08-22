@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legal_Custodian_Jn__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Legal Custodian</label>
+    <lookupFilter>
+        <active>true</active>
+        <booleanFilter>1 AND NOT (2 OR 3 OR 4 OR 5 OR 6 OR 7)</booleanFilter>
+        <filterItems>
+            <field>$Source.Service_Case__c</field>
+            <operation>equals</operation>
+            <valueField>Person__c.Service_Case__c</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Person__c.Person_Role_Formula__c</field>
+            <operation>contains</operation>
+            <value>1</value>
+        </filterItems>
+        <filterItems>
+            <field>Person__c.Person_Role_Formula__c</field>
+            <operation>contains</operation>
+            <value>2</value>
+        </filterItems>
+        <filterItems>
+            <field>Person__c.Person_Role_Formula__c</field>
+            <operation>contains</operation>
+            <value>3</value>
+        </filterItems>
+        <filterItems>
+            <field>Person__c.Person_Role_Formula__c</field>
+            <operation>contains</operation>
+            <value>4</value>
+        </filterItems>
+        <filterItems>
+            <field>Person__c.Person_Role_Formula__c</field>
+            <operation>contains</operation>
+            <value>5</value>
+        </filterItems>
+        <filterItems>
+            <field>Person__c.Person_Role_Formula__c</field>
+            <operation>contains</operation>
+            <value>Child</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Person__c</referenceTo>
+    <relationshipLabel>Legal Custodys (Legal Custodian)</relationshipLabel>
+    <relationshipName>Legal_Custodys1</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

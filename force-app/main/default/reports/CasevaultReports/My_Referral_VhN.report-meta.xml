@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Referral__c.Type__c</field>
+    </columns>
+    <columns>
+        <field>Referral__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>Referral__c.Organization_Name__c</field>
+    </columns>
+    <columns>
+        <field>Referral__c.Applicant_First_Name__c</field>
+    </columns>
+    <columns>
+        <field>Referral__c.Applicant_Last_Name__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>My Referral</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Referral__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Referral__c.Applicant_Date_of_Birth__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

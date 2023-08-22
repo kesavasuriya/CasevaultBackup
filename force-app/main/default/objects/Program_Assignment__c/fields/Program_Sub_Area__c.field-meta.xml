@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Program_Sub_Area__c</fullName>
+    <externalId>false</externalId>
+    <label>Program Sub Area</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Program_Area__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Family Preservation</fullName>
+                <default>false</default>
+                <label>Family Preservation</label>
+            </value>
+            <value>
+                <fullName>Interagency Family Preservation Services</fullName>
+                <default>false</default>
+                <label>Interagency Family Preservation Services</label>
+            </value>
+            <value>
+                <fullName>Investigation Services Provided</fullName>
+                <default>false</default>
+                <label>Investigation Services Provided</label>
+            </value>
+            <value>
+                <fullName>Out of Home - Child</fullName>
+                <default>false</default>
+                <label>Out of Home - Child</label>
+            </value>
+            <value>
+                <fullName>Parent/Guardian of Child in OOH</fullName>
+                <default>false</default>
+                <label>Parent/Guardian of Child in OOH</label>
+            </value>
+            <value>
+                <fullName>Sibling of Child in OOH</fullName>
+                <default>false</default>
+                <label>Sibling of Child in OOH</label>
+            </value>
+            <value>
+                <fullName>Child of a Minor Parent</fullName>
+                <default>false</default>
+                <label>Child of a Minor Parent</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>In Home</controllingFieldValue>
+            <valueName>Family Preservation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In Home</controllingFieldValue>
+            <valueName>Interagency Family Preservation Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>In Home</controllingFieldValue>
+            <valueName>Investigation Services Provided</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

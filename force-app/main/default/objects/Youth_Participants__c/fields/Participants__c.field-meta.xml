@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Participants__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Participants</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Person__c.Service_Case__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.Service_Case__c</valueField>
+        </filterItems>
+        <infoMessage>Not found</infoMessage>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Person__c</referenceTo>
+    <relationshipLabel>Youth Participants</relationshipLabel>
+    <relationshipName>Youth_Participants</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

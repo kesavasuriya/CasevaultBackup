@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Exit__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason for Exit</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adoption Disruption</fullName>
+                <default>false</default>
+                <label>Adoption Disruption</label>
+            </value>
+            <value>
+                <fullName>Adoption Finalization</fullName>
+                <default>false</default>
+                <label>Adoption Finalization</label>
+            </value>
+            <value>
+                <fullName>Court Ordered Return Home Against DSS Recommendation</fullName>
+                <default>false</default>
+                <label>Court ordered return home against DSS recommendation</label>
+            </value>
+            <value>
+                <fullName>Custody/Guardianship - Non-Relative</fullName>
+                <default>false</default>
+                <label>Custody/Guardianship - Non-Relative</label>
+            </value>
+            <value>
+                <fullName>Custody/Guardianship - Relative</fullName>
+                <default>false</default>
+                <label>Custody/Guardianship - Relative</label>
+            </value>
+            <value>
+                <fullName>Custody Non-Relative</fullName>
+                <default>false</default>
+                <label>Custody Non-Relative</label>
+            </value>
+            <value>
+                <fullName>Death of Child</fullName>
+                <default>false</default>
+                <label>Death of Child</label>
+            </value>
+            <value>
+                <fullName>Emancipation - Independence</fullName>
+                <default>false</default>
+                <label>Emancipation - Independence</label>
+            </value>
+            <value>
+                <fullName>Emancipation - Marriage</fullName>
+                <default>false</default>
+                <label>Emancipation - Marriage</label>
+            </value>
+            <value>
+                <fullName>Emancipation - Military</fullName>
+                <default>false</default>
+                <label>Emancipation - Military</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other Relative</fullName>
+                <default>false</default>
+                <label>Other Relative</label>
+            </value>
+            <value>
+                <fullName>Remove GAP Suspension</fullName>
+                <default>false</default>
+                <label>Remove GAP suspension</label>
+            </value>
+            <value>
+                <fullName>Reunification</fullName>
+                <default>false</default>
+                <label>Reunification</label>
+            </value>
+            <value>
+                <fullName>Runaway</fullName>
+                <default>false</default>
+                <label>Runaway</label>
+            </value>
+            <value>
+                <fullName>Transfer to Another DHR Agency</fullName>
+                <default>false</default>
+                <label>Transfer to Another DHR Agency</label>
+            </value>
+            <value>
+                <fullName>Live with other Relative</fullName>
+                <default>false</default>
+                <label>Live with other Relative</label>
+            </value>
+            <value>
+                <fullName>Guardianship</fullName>
+                <default>false</default>
+                <label>Guardianship</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
